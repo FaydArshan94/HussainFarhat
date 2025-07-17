@@ -90,7 +90,7 @@ const Home = () => {
               <div className="w-full sm:w-1/3 h-full sm:h-[90vh]  shadow-lg overflow-hidden">
                 <img
                   className="w-[100vh] z-20 h-[60vh] object-cover sm:h-full"
-                  src="src/assets/fht.jpg"
+                  src="https://instagram.fagr1-2.fna.fbcdn.net/v/t51.2885-15/504346431_17951153696978424_9171351455365472855_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEyODV4MTcxMy5zZHIuZjc1NzYxLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fagr1-2.fna.fbcdn.net&_nc_cat=100&_nc_oc=Q6cZ2QHd330wiYv7NMtRJGGOpcxGVcJuBuy4_IL9F5wX7NBf-Vz4ZtuOoSkh7b2fF9_P0IX-OPs40LY3KVt1BwtjTCYD&_nc_ohc=vgLVhfeYKQYQ7kNvwH7iTY5&_nc_gid=WrXGLlsIM7QkdVYhRJN-nA&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=MzY0ODQxMDM3MTc0OTkzODA1Ng%3D%3D.3-ccb7-5&oh=00_AfS5eJdz29PLGS_ehbkhX3xoNjNSKzfnuK3OoE45kZZUtA&oe=687F0A44&_nc_sid=22de04"
                   alt=""
                 />
               </div>
