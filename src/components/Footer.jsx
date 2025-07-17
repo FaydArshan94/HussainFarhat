@@ -1,5 +1,5 @@
-import React from "react";
 
+import logo from '../assets/logo.png'
 const Footer = () => {
   return (
     <footer className="bg-black h-screen text-white px-6 py-10 flex flex-col items-center justify-evenly text-center sm:h-[200vh]">
@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex flex-col items-center space-y-2">
         <img
           className="w-20 h-20 sm:h-32 sm:w-32"
-          src="src\assets\abyDRUeZdxkU.png"
+          src={logo}
           alt=""
         />
         <div className="text-base tracking-widest text-gray-300 sm:text-2xl">
