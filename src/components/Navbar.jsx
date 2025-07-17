@@ -1,12 +1,12 @@
 import React from "react";
-
+import logo from "../assets/logo.png"
 const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-transparent text-white px-4 sm:px-10 py-6 flex  justify-between sm:items-center gap-4 sm:gap-0">
       {/* Logo */}
       <div className="flex items-center gap-4">
         <img
-          src="src\assets\logo.png"
+          src={logo}
           alt="char"
           className="h-12 w-12 sm:h-16 sm:w-16 object-cover"
         />
