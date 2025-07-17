@@ -2,6 +2,12 @@ import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
+import Marquee from "../components/Marquee";
+import Page2 from "../components/Page2";
+import Page3 from "../components/Page3";
+import Page4 from "../components/Page4";
+import Page5 from "../components/Page5";
+import Page6 from "../components/Page6";
 const Home = () => {
   const [showContent, setShowContent] = useState(false);
   const landingRef = useRef(null);
@@ -25,48 +31,52 @@ const Home = () => {
     });
   });
 
-  useGSAP(() => {
-    if (!showContent) return;
+  // useGSAP(() => {
+  //   if (!showContent) return;
 
-    const landing = landingRef.current;
+  //   const landing = landingRef.current;
 
-    gsap.to(landing, {
-      rotate: 0,
-      scale: 1,
-      duration: 1,
-      ease: "expo.inOut",
-    });
+  //   gsap.to(landing, {
+  //     rotate: 0,
+  //     scale: 1,
+  //     duration: 1,
+  //     ease: "expo.inOut",
+  //   });
 
-    const moveHandler = (e) => {
-      const xmove = (e.clientX / window.innerWidth - 0.5) * 40;
+  //   const moveHandler = (e) => {
+  //     const xmove = (e.clientX / window.innerWidth - 0.5) * 40;
 
-      gsap.to(".photosdiv .text", {
-        x: `${xmove * 0.4}%`,
-      });
+  //     gsap.to(".photosdiv .text", {
+  //       x: `${xmove * 0.4}%`,
+  //     });
 
-      gsap.to(".bg", {
-        x: `${xmove * 1.5}`,
-      });
-    };
+  //     gsap.to(".bg", {
+  //       x: `${xmove * 1.5}`,
+  //     });
+  //   };
 
-    landing?.addEventListener("mousemove", moveHandler);
+  //   landing?.addEventListener("mousemove", moveHandler);
 
-    return () => landing?.removeEventListener("mousemove", moveHandler);
-  }, [showContent]);
+  //   return () => landing?.removeEventListener("mousemove", moveHandler);
+  // }, [showContent]);
 
   return (
     <>
       {/* SVG Loader */}
       <div className="svg fixed w-full h-screen  z-[100] flex items-center justify-center overflow-hidden bg-black">
-        <img className="eye h-40" src="https://images.typeform.com/images/abyDRUeZdxkU" alt="eye" />
+        <img
+          className="eye h-40"
+          src="https://images.typeform.com/images/abyDRUeZdxkU"
+          alt="eye"
+        />
       </div>
 
       {showContent && (
-        <div className="main w-full overflow-x-hidden">
+        <div className="main w-full relative oveflow-hidden">
           {/* Landing Section */}
           <div
             ref={landingRef}
-            className="landing relative   w-full h-screen sm:h-[120vh] overflow-hidden sm:bg-bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] "
+            className="landing relative   w-full h-[90vh] sm:h-[120vh] overflow-hidden sm:bg-bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] "
           >
             <img
               className="w-full h-full absolute z-0 sepia-50 object-cover"
@@ -77,13 +87,13 @@ const Home = () => {
             <div className="h-[70vh] z-1  w-1/2 sm:w-full sm:h-full flex flex-col sm:flex-row sm:justify-center items-center justify-between sm:items-start absolute top-24 sm:top-[10%] sm:gap-10 left-1/2 -translate-x-1/2">
               <div className="w-full sm:w-1/3 h-full sm:h-[90vh]  shadow-lg overflow-hidden">
                 <img
-                  className="w-full z-20 h-full object-cover"
-                  src="https://assets.skool.com/f/f48bd8fb890847568a069acef1234924/9d3a70fb9fdd40979bdb6434eec358635b3d696593524c889ec6c819f7ec3aea"
+                  className="w-[100vh] z-20 h-[60vh] object-cover sm:h-full"
+                  src="src\assets\fht.jpg"
                   alt=""
                 />
               </div>
 
-              <div className="z-10 sm:flex sm:flex-col  sm:items-start sm:w-1/3">
+              <div className="z-10 sm:flex sm:flex-col justify-center items-center sm:items-start sm:w-1/3">
                 <div className="sm:flex sm:flex-col  sm:items-start">
                   <h1 className="text-8xl hidden sm:block font-['Superset'] text-white tracking-wide text-center sm:text-[9rem]">
                     THE{" "}
@@ -100,11 +110,11 @@ const Home = () => {
                   Dream body. No cardio. No diets. Guaranteed results.
                 </p>
 
-                <div className="flex flex-col items-center justify-center mt-8">
+                <div className="flex flex-col   items-center justify-center mt-8">
                   <h1 className="text-xl py-[2px] font-sans-serif font-['light'] text-white tracking-wide text-center">
                     LET'S GO.
+                    <div className=" h-[3px] bg-zinc-50 "></div>
                   </h1>
-                  <div className="w-[5.3rem] h-[3px] bg-zinc-50 ">f</div>
                 </div>
               </div>
             </div>
@@ -115,8 +125,14 @@ const Home = () => {
             </div>
           </div>
 
+          <Marquee />
 
-          <div className="w-full h-screen bg-black"></div>
+          <Page2 />
+          <Page3 />
+          <Page4 />
+          <Page5 />
+          <Page6 />
+
         </div>
       )}
     </>

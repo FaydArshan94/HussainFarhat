@@ -1,40 +1,47 @@
 @import "tailwindcss";
 
-
-
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
-    overflow-x: hidden;
+  /* overflow: hidden; */
 }
 
 @font-face {
-  font-family: 'light';
+  font-family: "light";
   src: url(C:\Users\pc\HussainFarhat\src\assets\light.ttf);
 }
 
-
-
-
 @font-face {
-  font-family: 'regular';
+  font-family: "regular";
   src: url(C:\Users\pc\HussainFarhat\src\assets\regular.ttf);
 }
 
-
 @font-face {
-  font-family: 'bold';
+  font-family: "bold";
   src: url(C:\Users\pc\HussainFarhat\src\assets\bold.ttf);
 }
 
-
 @font-face {
-  font-family: 'FHT';
+  font-family: "FHT";
   src: url(C:\Users\pc\HussainFarhat\public\FrontLines.ttf);
 }
 
-
 @font-face {
-  font-family: 'Superset';
+  font-family: "Superset";
   src: url(C:\Users\pc\HussainFarhat\src\assets\SupersetRegular.ttf);
 }
+
+.parallax {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.scroller {
+  display: flex;
+  gap: 5rem;
+}
+
+
+
