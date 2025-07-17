@@ -12,7 +12,7 @@ const Page5 = () => {
           src="https://maltapersonaltrainer.com/wp-content/uploads/2023/07/join-us.mp4"
         ></video>
         <div className="video-copy absolute h-full  w-full   select-none bg-black mix-blend-multiply left-0  top-0  flex items-center justify-center  ">
-          <h1 className="text-[15rem] font-['Superset']  leading-none text-center text-white sm:text-[35rem] ">
+          <h1 className="text-[15rem] font-['Superset'] tracking-wide leading-none text-center text-white sm:text-[35rem] ">
             JOIN US
           </h1>
         </div>
