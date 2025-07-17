@@ -6,7 +6,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex items-center gap-4">
         <img
-          src="src/assets/abyDRUeZdxkU.png"
+          src="https://images.typeform.com/images/abyDRUeZdxkU"
           alt="char"
           className="h-12 w-12 sm:h-16 sm:w-16 object-cover"
         />

@@ -58,7 +58,7 @@ const Home = () => {
     <>
       {/* SVG Loader */}
       <div className="svg fixed w-full h-screen  z-[100] flex items-center justify-center overflow-hidden bg-black">
-        <img className="eye h-40" src="src/assets/abyDRUeZdxkU.png" alt="eye" />
+        <img className="eye h-40" src="https://images.typeform.com/images/abyDRUeZdxkU" alt="eye" />
       </div>
 
       {showContent && (
