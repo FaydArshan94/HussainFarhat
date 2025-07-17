@@ -90,7 +90,7 @@ const Home = () => {
               <div className="w-full sm:w-1/3 h-full sm:h-[90vh]  shadow-lg overflow-hidden">
                 <img
                   className="w-[100vh] z-20 h-[60vh] object-cover sm:h-full"
-                  src="src\assets\fht.jpg"
+                  src="src/assets/fht.jpg"
                   alt=""
                 />
               </div>
