@@ -10,7 +10,7 @@ import Page5 from "../components/Page5";
 import Page6 from "../components/Page6";
 import Page7 from "../components/Page7";
 import Footer from "../components/Footer";
-import fht from '../assets/fht.jpg';
+import fht from "../assets/fht.jpg";
 const Home = () => {
   const [showContent, setShowContent] = useState(false);
   const landingRef = useRef(null);
@@ -114,9 +114,8 @@ const Home = () => {
                 </p>
 
                 <div className="flex flex-col   items-center justify-center mt-8">
-                  <h1 className="text-xl py-[2px] font-sans-serif font-['light'] text-white tracking-wide text-center">
+                  <h1 className="text-xl py-[2px] font-sans-serif font-['light'] border-b-4 border-white text-white tracking-wide text-center">
                     LET'S GO.
-                    <div className=" h-[3px] bg-zinc-50 "></div>
                   </h1>
                 </div>
               </div>
