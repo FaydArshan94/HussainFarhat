@@ -9,27 +9,27 @@ body {
 
 @font-face {
   font-family: "light";
-  src: url(C:\Users\pc\HussainFarhat\src\assets\light.ttf);
+  src: url("/fonts/light.ttf");
 }
 
 @font-face {
   font-family: "regular";
-  src: url(C:\Users\pc\HussainFarhat\src\assets\regular.ttf);
+  src: url("/fonts/regular.ttf");
 }
 
 @font-face {
   font-family: "bold";
-  src: url(C:\Users\pc\HussainFarhat\src\assets\bold.ttf);
+  src: url("/fonts/bold.ttf");
 }
 
 @font-face {
   font-family: "FHT";
-  src: url(C:\Users\pc\HussainFarhat\public\FrontLines.ttf);
+  src: url("/fonts/FrontLines.ttf");
 }
 
 @font-face {
   font-family: "Superset";
-  src: url(C:\Users\pc\HussainFarhat\src\assets\SupersetRegular.ttf);
+  src: url("/fonts/SupersetRegular.ttf");
 }
 
 .parallax {
@@ -42,6 +42,3 @@ body {
   display: flex;
   gap: 5rem;
 }
-
-
-
