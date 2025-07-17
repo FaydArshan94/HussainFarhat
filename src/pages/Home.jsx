@@ -90,7 +90,7 @@ const Home = () => {
               <div className="w-full sm:w-1/3 h-full sm:h-[90vh]  shadow-lg overflow-hidden">
                 <img
                   className="w-[100vh] z-20 h-[60vh] object-cover sm:h-full"
-                  src="https://i.ytimg.com/vi/NK5wyU2f224/oar2.jpg?sqp=-oaymwEYCJUDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLCzt5RA-y9iKaXRK-8a3Un4NZjx7w"
+                  src="https://instagram.fagr1-2.fna.fbcdn.net/v/t51.2885-15/504346431_17951153696978424_9171351455365472855_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEyODV4MTcxMy5zZHIuZjc1NzYxLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fagr1-2.fna.fbcdn.net&_nc_cat=100&_nc_oc=Q6cZ2QFpCawqQauQ5zjvQEo0b0aZT337vt6yco-7ntzD2P6BhUkBJhVgF17nW33MIFXXsdUkWwhyvz2c6tv7gXOO7CNx&_nc_ohc=vgLVhfeYKQYQ7kNvwH7iTY5&_nc_gid=lOR0AQgm7dDTLmMQmDiCLA&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=MzY0ODQxMDM3MTc0OTkzODA1Ng%3D%3D.3-ccb7-5&oh=00_AfR2W-0-fSvp81nRRyoPl5iIDUBus57qZhZ6XlMxhFrbDA&oe=687F0A44&_nc_sid=22de04"
                   alt=""
                 />
               </div>
