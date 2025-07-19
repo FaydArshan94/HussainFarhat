@@ -32,6 +32,7 @@ const Marquee = () => {
           "Healthy Lifestyle",
           "Muscle Gain",
         ].map((text, index) => (
+          <div className="flex items-center justify-between gap-10 sm:gap-20">
           <span
             key={index}
             className="sm:text-[10rem] text-8xl gap-10 font-['Superset'] tracking-wide flex items-center sm:gap-40 mx-4 uppercase text-transparent"
@@ -40,8 +41,10 @@ const Marquee = () => {
               color: "transparent",
             }}
           >
-            {text} <span className="sm:text-8xl text-6xl text-white italic font-bold ">/</span>
+            {text} 
           </span>
+          <span className="sm:text-8xl text-6xl text-center italic font-bold  text-[#890900]">/</span>
+          </div>
         ))}
       </div>
     </div>

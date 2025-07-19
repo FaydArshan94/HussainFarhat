@@ -3,19 +3,19 @@ import { Dumbbell, Users, ListChecks } from "lucide-react"; // Icons from lucide
 
 const values = [
   {
-    icon: <Dumbbell size={40} className="text-blue-500 mb-4" />,
+    icon: <Dumbbell size={40} className="text-[#890900] mb-4" />,
     title: "STRONG",
     description:
       "We will help you build physical and mental strength through our customised training programs that cater to each member’s unique needs and abilities.",
   },
   {
-    icon: <Users size={40} className="text-blue-500 mb-4" />,
+    icon: <Users size={40} className="text-[#890900] mb-4" />,
     title: "FRIENDLY",
     description:
       "We are welcoming, supportive, and caring so that everyone feels comfortable to perform at their best. But we’re not soft, so expect to be motivated and pushed towards your goals.",
   },
   {
-    icon: <ListChecks size={40} className="text-blue-500 mb-4" />,
+    icon: <ListChecks size={40} className="text-[#890900] mb-4" />,
     title: "ACCOUNTABLE",
     description:
       "We hold ourselves accountable for helping you achieve your best results. We are always working towards your goals, playing an active role in your fitness journey.",

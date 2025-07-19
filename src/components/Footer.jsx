@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="text-5xl leading-tight font-['Superset']   sm:text-8xl">
         YOUR FITNESS <br />
         <span className="text-gray-400">JOURNEY</span>{" "}
-        <span className="text-red-500">IS HERE</span>
+        <span className="text-[#890900]">IS HERE</span>
       </div>
 
       {/* Navigation Links */}

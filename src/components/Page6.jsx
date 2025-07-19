@@ -15,7 +15,7 @@ const Page6 = () => {
           else. This is all about you. Sign up for 1-on-1 sessions or a small
           group of your choice (max 4).
         </p>
-        <button className="mt-6 font-['light'] text-[1.5rem] tracking-tight font-light border-b-4 border-[#fff] text-white hover:text-[#0058FF] hover:border-white transition-all duration-200 uppercase">
+        <button className="mt-6 font-['light'] text-[1.5rem] tracking-tight font-light border-b-4 border-[#890900] text-white hover:text-[#0058FF] hover:border-white transition-all duration-200 uppercase">
           Start Your Journey
         </button>
       </div>

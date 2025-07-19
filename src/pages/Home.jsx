@@ -2,7 +2,7 @@ import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
-import Marquee from "../components/Marquee";
+// import Marquee from "../components/Marquee";
 import Page2 from "../components/Page2";
 import Page3 from "../components/Page3";
 import Page4 from "../components/Page4";
@@ -10,6 +10,8 @@ import Page5 from "../components/Page5";
 import Page6 from "../components/Page6";
 import Page7 from "../components/Page7";
 import Footer from "../components/Footer";
+import Last from "../components/Last";
+
 import fht from "../assets/fht.jpg";
 const Home = () => {
   const [showContent, setShowContent] = useState(false);
@@ -75,59 +77,56 @@ const Home = () => {
       </div>
 
       {showContent && (
-        <div className="main w-full relative oveflow-hidden">
+        <div className="main w-full bg-black relative oveflow-hidden ">
           {/* Landing Section */}
           <div
             ref={landingRef}
-            className="landing relative   w-full h-[90vh] sm:h-[120vh] overflow-hidden sm:bg-bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] "
+            className="landing relative flex items-start justify-center min-h-[115vh] w-full  sm:h-[120vh] overflow-hidden bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] bg-cover bg-no-repeat bg-center"
           >
-            <img
+            {/* <img
               className="w-full h-full absolute z-0 sepia-50 object-cover"
               src="https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg"
               alt=""
-            />
+            /> */}
+            <div className="shapes w-full h-1/2 absolute  z-10 top-1/2  sm:h-full sm:w-full -translate-y-1/2 left-0 flex flex-col items-center justify-center  sm:left-1/2 sm:-translate-x-1/2">
+              <div className="shape h-16 scale-[2] z-0 w-full bg-zinc-950 opacity-100 -rotate-20 sm:w-1/4 sm:h-20 sm:mt-24 sm:-rotate-5 sm:rotate-x-30 sm:-rotate-y-40"></div>
+              <div className="shape h-28 scale-[1.8] mt-10 z-1 w-full bg-zinc-950 opacity-95  rotate-20 sm:rotate-180 sm:h-40 sm:w-[50%] sm:scale-[2] sm:mt-60 sm:rotate-x-30 sm:-rotate-y-40 "></div>
+            </div>
 
-            <div className="h-[70vh] z-1  w-1/2 sm:w-full sm:h-full flex flex-col sm:flex-row sm:justify-center items-center justify-between sm:items-start absolute top-24 sm:top-[10%] sm:gap-10 left-1/2 -translate-x-1/2">
-              <div className="w-full sm:w-1/3 h-full sm:h-[90vh]  shadow-lg overflow-hidden">
+            <div className="inner ... z-40 h-full relative px-4 mt-[15vh]  w-full flex flex-col items-center sm:w-full sm:h-full   sm:flex-row sm:justify-center  sm:items-start  sm:top-[10%] sm:gap-10 ">
+              <div className="w-[16rem]    sm:w-1/3 z-10 sm:h-[90vh]  shadow-lg overflow-hidden">
                 <img
-                  className="w-[100vh] z-20 h-[60vh] object-cover sm:h-full"
+                  className="z-20 h-full w-full object-cover sm:h-full"
                   src={fht}
                   alt=""
                 />
               </div>
 
-              <div className="z-10 sm:flex sm:flex-col justify-center items-center sm:items-start sm:w-1/3">
-                <div className="sm:flex sm:flex-col  sm:items-start">
-                  <h1 className="text-8xl hidden sm:block font-['Superset'] text-white tracking-wide text-center sm:text-[9rem]">
-                    THE{" "}
+              <div className="z-10 absolute top-[90%] w-[80%] px-10 sm:flex sm:flex-col text-center justify-center items-center sm:items-start sm:w-1/3">
+                <div className=" text-center  sm:text-left">
+                  <h1 className="text-[clamp(5rem,15vw,8rem)]  leading-none font-['Superset'] text-white tracking-wide">
+                    THE GLADIOLUS
                   </h1>
-                  <h1 className="text-8xl font-['Superset'] text-white tracking-wide text-center sm:text-[9rem]">
-                    GLADIOLUS{" "}
-                  </h1>
-                  <h1 className="text-8xl font-['Superset'] text-white tracking-wide text-center sm:text-[9rem]">
+                  <h1 className="text-[clamp(5rem,15vw,8rem)]  leading-none font-['Superset'] text-[#890900] tracking-wide">
                     COACHING
                   </h1>
                 </div>
 
-                <p className="text-white text-center text-md leading-none font-sans-serif mt-4 sm:text-2xl sm:w-full  sm:text-left">
+                <p className="text-white  z-10 px-4 text-lg leading-snug font-['light'] mt-6 sm:text-2xl sm:w-full  sm:text-left">
                   Dream body. No cardio. No diets. Guaranteed results.
                 </p>
 
-                <div className="flex flex-col   items-center justify-center mt-8">
-                  <h1 className="text-xl py-[2px] font-sans-serif font-['light'] border-b-4 border-white text-white tracking-wide text-center">
+                <div className="flex flex-col   items-center justify-center mt-10">
+                  <h1 className="text-xl py-[2px] font-thin font-['light'] border-b-4 border-[#890900] text-zinc-100 tracking-wide text-center">
                     LET'S GO.
                   </h1>
                 </div>
               </div>
             </div>
-
-            <div className="shapes w-full h-1/2 absolute z-0 top-1/2  sm:h-full sm:w-full -translate-y-1/2 left-0 flex flex-col items-center justify-center  sm:left-1/2 sm:-translate-x-1/2">
-              <div className="shape h-16 scale-[2] z-0 w-full bg-zinc-950 opacity-100 -rotate-20 sm:w-1/4 sm:h-20 sm:mt-24 sm:-rotate-5 sm:rotate-x-30 sm:-rotate-y-40"></div>
-              <div className="shape h-28 scale-[1.8] mt-10 z-1 w-full bg-zinc-950 opacity-95  rotate-20 sm:rotate-180 sm:h-40 sm:w-[50%] sm:scale-[2] sm:mt-60 sm:rotate-x-30 sm:-rotate-y-40 "></div>
-            </div>
           </div>
 
-          <Marquee />
+          {/* <Marquee /> */}
+          <Last />
 
           <Page2 />
           <Page3 />
