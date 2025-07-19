@@ -81,7 +81,7 @@ const Home = () => {
           {/* Landing Section */}
           <div
             ref={landingRef}
-            className="landing relative flex items-start justify-center min-h-[115vh] w-full  sm:h-[120vh] overflow-hidden bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] bg-cover bg-no-repeat bg-center"
+            className="landing relative flex items-start justify-center min-h-[120vh] w-full  sm:h-[120vh] overflow-hidden bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] bg-cover bg-no-repeat bg-center"
           >
             {/* <img
               className="w-full h-full absolute z-0 sepia-50 object-cover"
