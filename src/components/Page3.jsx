@@ -2,7 +2,7 @@ import React from "react";
 
 const Page3 = () => {
   return (
-    <div className="w-full relative h-screen px-[1rem] bg-black">
+    <div className="w-full relative h-screen  bg-black">
       <div className="w-full h-screen  ">
         <video
           className="w-full h-full object-cover"
@@ -14,7 +14,7 @@ const Page3 = () => {
 
         <div className="w-full h-full bg-black/90 absolute left-0 top-0"></div>
 
-        <div className="w-full px-[2rem]  absolute top-1/2 -translate-y-1/2 left-0 md:top-1/2 md:-translate-y-1/2 flex flex-col md:flex-row md:items-end md:justify-evenly lg:justify-between xl:justify-center md:gap-[3rem] 2xl:gap-[7rem] justify-center    ">
+        <div className="w-full px-[1rem]  absolute top-1/2 -translate-y-1/2 left-0 md:top-1/2 md:-translate-y-1/2 flex flex-col md:flex-row md:items-end md:justify-evenly lg:justify-between xl:justify-center md:gap-[3rem] 2xl:gap-[7rem] justify-center    ">
           <div className="">
             <h1 className="text-[11rem] w-full 2sm:text-[12rem] md:text-[15rem] xl:text-[17rem] 2xl:text-[18rem] xl:mr-[10rem] font-['Superset'] uppercase leading-none  text-white  ">
               What
