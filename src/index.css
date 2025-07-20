@@ -14,9 +14,11 @@ body {
 @theme {
   --breakpoint-xs: 400px;
   --breakpoint-2sm: 577px;
+  --breakpoint-mdsm: 768px;
   --breakpoint-md: 988px;
 
   --breakpoint-mdx: 988px;
+  --breakpoint-llg: 1280px;
 }
 
 @font-face {

@@ -2,39 +2,49 @@ import React from "react";
 
 const Page2 = () => {
   return (
-    <div className="w-full min-h-screen relative py-20 bg-black flex flex-col items-end justify-end sm:px-28">
-      <div className="w-[70vw] h-[70vh] sm:h-[100vh] sm:w-[65vw] bg-pink-400">
+    <div className="w-full text-white min-h-screen  py-20 mdsm:px-[1.8rem] relative flex flex-col items-center justify-center px-4">
+      <div className="w-[80vw] mdsm:w-[70vw] h-1/2  2sm:h-[60%] 2sm:mt-20 mdsm:right-[1.8rem] absolute top-0 right-0 xl:right-24 z-10 ">
         <img
-          className="w-full h-full object-cover sm:object-top"
-          src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2f8298a8-f770-4cb8-a224-a2613b158a83/width=450/7263809.jpeg"
-          alt=""
+          src="https://maltapersonaltrainer.com/wp-content/uploads/2023/07/MPT-Homepage-Benefits-of-PT.jpg"
+          alt="Hero Image"
+          className="object-cover w-full h-full"
         />
       </div>
 
-      <div className="absolute left-5 top-1/3 sm:bottom-20 translate-y-1/4 sm:left-40 ">
-        <h1 className="text-8xl text-white font-['Superset'] sm:text-[8rem] sm:tracking-wide">EXPERIENCE</h1>
-        <h1 className="text-8xl text-white font-['Superset'] sm:text-[8rem] sm:tracking-wide">THE BENEFITS</h1>
-        <h1 className="text-8xl text-white font-['Superset'] sm:text-[8rem] sm:tracking-wide">OF PERSONAL</h1>
-        <h1 className="text-8xl text-white font-['Superset'] sm:text-[8rem] sm:tracking-wide">TRANING</h1>
-      </div>
+      <div className="flex flex-col mdsm:flex-row mdsm:justify-between    z-10 mt-40 2sm:mt-60 sm:mt-[30rem] items-start w-full ">
+        <div className="h1s relative mdsm:mt-[6rem] mdsm:pl-5 xl:pl-28 2xl:pl-40 mdsm:w-2/3 md:w-[70%] mdsm:text-left  font-['Superset'] flex flex-col items-start rounded-lg w-full">
+          <h1 className="text-7xl   tracking-wide 2sm:text-8xl  md:text-[7.2rem]  lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[8rem] text-center">
+            EXPERIENCE
+          </h1>
+          <h1 className="text-7xl   tracking-wide 2sm:text-8xl  md:text-[7.2rem]  lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[8rem] text-center">
+            THE BENEFITS
+          </h1>
+          <h1 className="text-7xl   tracking-wide 2sm:text-8xl  md:text-[7.2rem]  lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[8rem] text-center">
+            OF PERSONAL
+          </h1>
+          <h1 className="text-7xl   tracking-wide 2sm:text-8xl  md:text-[7.2rem]  lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[8rem] text-center">
+            TRAINING
+          </h1>
+        </div>
 
-      <div className="px-5 mt-60 text-white font-['light'] flex flex-col gap-5  sm:w-1/2 sm:text-xl sm:mt-10">
-        <p>
-          We build personalized plans for your fat loss, muscle gain, or overall
-          health. No fluff — just real, effective training and nutrition that
-          fits your life.
-        </p>
+        <div className=" mt-8  rounded-lg mdsm:mt-80 md:mt-96 font-['FrankitonSansL'] font-thin w-full 2sm:w-[70%] mdsm:w-2/3 md:w-[90%] lg:w-full flex flex-col items-start mdsm:items-end xl:items-center">
+          <p className="text-lg sm:text-lg md:text-2xl md:w-[450px] lg:text-xl lg:w-[500px] xl:w-[75%] xl:text-2xl font-['FrankitonSansL']  mb-4 text-left">
+            We build personalized plans for your fat loss, muscle gain, or
+            overall health. No fluff — just real, effective training and
+            nutrition that fits your life.
+          </p>
 
-        <p>
-          We build personalized plans for your fat loss, muscle gain, or overall
-          health. No fluff — just real, effective training and nutrition that
-          fits your life.
-        </p>
+          <p className="text-lg sm:text-lg md:text-2xl md:w-[450px] lg:text-xl lg:w-[500px] xl:w-[75%] xl:text-2xl font-['FrankitonSansL']  mb-4 text-left">
+            We build personalized plans for your fat loss, muscle gain, or
+            overall health. No fluff — just real, effective training and
+            nutrition that fits your life.
+          </p>
 
-        <p>
-          You bring consistency. We bring the strategy. Together, we get
-          results.
-        </p>
+          <p className="text-lg sm:text-lg md:text-2xl md:w-[450px] lg:text-xl lg:w-[500px] xl:w-[75%] xl:text-2xl font-['FrankitonSansL']  mb-4 text-left">
+            You bring consistency. We bring the strategy. Together, we get
+            results.
+          </p>
+        </div>
       </div>
     </div>
   );
