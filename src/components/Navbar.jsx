@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 px-4 sm:px-8 py-6 flex items-center justify-between ">
+    <nav className="w-full fixed top-0 left-0  z-50 px-[1rem] py-6  flex items-center justify-between ">
       {/* Left: Responsive Logo */}
       <div className="flex items-center">
         <img

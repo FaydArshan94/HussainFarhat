@@ -77,46 +77,72 @@ const Home = () => {
       </div>
 
       {showContent && (
-        <div className="main w-full bg-black relative oveflow-hidden ">
+        <div className="main w-full  bg-black relative overflow-hidden ">
           {/* Landing Section */}
           <div
             ref={landingRef}
-            className="landing relative flex items-start justify-center min-h-[120vh] w-full  sm:h-[120vh] overflow-hidden bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] bg-cover bg-no-repeat bg-center"
+            className="landing relative px-[2rem]  flex  items-center justify-center h-[110vh] sm:h-[120vh] md:h-[100vh] lg:h-screen 2xl:h-[120vh] w-full overflow-hidden bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] bg-cover bg-no-repeat bg-center "
           >
-            {/* <img
-              className="w-full h-full absolute z-0 sepia-50 object-cover"
-              src="https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg"
-              alt=""
-            /> */}
-            <div className="shapes w-full h-1/2 absolute  z-10 top-1/2  sm:h-full sm:w-full -translate-y-1/2 left-0 flex flex-col items-center justify-center  sm:left-1/2 sm:-translate-x-1/2">
-              <div className="shape h-16 scale-[2] z-0 w-full bg-zinc-950 opacity-100 -rotate-20 sm:w-1/4 sm:h-20 sm:mt-24 sm:-rotate-5 sm:rotate-x-30 sm:-rotate-y-40"></div>
-              <div className="shape h-28 scale-[1.8] mt-10 z-1 w-full bg-zinc-950 opacity-95  rotate-20 sm:rotate-180 sm:h-40 sm:w-[50%] sm:scale-[2] sm:mt-60 sm:rotate-x-30 sm:-rotate-y-40 "></div>
+            <div className="shapes w-full h-1/2 absolute  z-10 top-1/2   -translate-y-1/2 left-0 flex flex-col items-center justify-center  ">
+              <div className="shape absolute  -top-20  mt-10  ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1249"
+                  height="299"
+                  opacity="0.8"
+                  viewBox="0 0 1249 799"
+                  fill="none"
+                >
+                  <path
+                    fill="#0a0a0a"
+                    d="M 0 0 L 0 313 L 1249 799 L 1249 486 Z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div className="shape absolute mt-40  ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1249"
+                  height="399"
+                  opacity="0.8"
+                  viewBox="0 0 1249 799"
+                  fill="none"
+                >
+                  <path
+                    fill="#0a0a0a"
+                    d="M 0 0 L 0 313 L 1249 799 L 1249 486 Z"
+                  ></path>
+                </svg>
+              </div>
             </div>
 
-            <div className="inner ... z-40 h-full relative px-4 mt-[15vh]  w-full flex flex-col items-center sm:w-full sm:h-full   sm:flex-row sm:justify-center  sm:items-start  sm:top-[10%] sm:gap-10 ">
-              <div className="w-[16rem]    sm:w-1/3 z-10 sm:h-[90vh]  shadow-lg overflow-hidden">
+            <div className="inner z-40 h-[90vh] md:h-full relative   w-full flex flex-col items-center mdx:flex-row md:justify-center  mdx:items-center md:px-20  mdx:w-full  mdx:gap-10 sm:w-full ">
+              <div className="w-[30vh]  h-[30rem] 2sm:h-[40rem] 2sm:w-[38vh]  md:w-[32rem] md:h-[70vh] lg:h-[62vh] lg:w-[30rem] xl:w-[28rem] xl:h-[66vh] 2xl:w-[30rem] 2xl:h-[93vh] z-10 shadow-lg ">
                 <img
-                  className="z-20 h-full w-full object-cover sm:h-full"
+                  className="z-20 h-full w-full object-cover "
                   src={fht}
                   alt=""
                 />
               </div>
 
-              <div className="z-10 absolute top-[90%] w-[80%] px-10 sm:flex sm:flex-col text-center justify-center items-center sm:items-start sm:w-1/3">
-                <div className=" text-center  sm:text-left">
-                  <h1 className="text-[clamp(5rem,15vw,8rem)]  leading-none font-['Superset'] text-white tracking-wide">
+              <div className="z-10 w-full md:w-fit flex flex-col h-full md:h-fit items-center -translate-y-10 mdx:translate-y-0 mdx:items-start mdx:justify-start mdx:px-0 px-10  ">
+                <div className="text-center mdx:text-left mdx:w-1/2 ">
+                  <h1 className="text-[clamp(5rem,15vw,8rem)] mdx:text-[8rem] lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-none font-['Superset'] text-white tracking-wide">
                     THE GLADIOLUS
                   </h1>
-                  <h1 className="text-[clamp(5rem,15vw,8rem)]  leading-none font-['Superset'] text-[#890900] tracking-wide">
+                  <h1 className="text-[clamp(5rem,15vw,8rem)] mdx:text-[8rem] lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-none font-['Superset'] text-[#890900] tracking-wide">
                     COACHING
                   </h1>
                 </div>
 
-                <p className="text-white  z-10 px-4 text-lg leading-snug font-['light'] mt-6 sm:text-2xl sm:w-full  sm:text-left">
-                  Dream body. No cardio. No diets. Guaranteed results.
-                </p>
+                <div className="flex items-center   text-center mdx:w-[20rem] xl:w-[25rem] justify-center mdx:justify-start">
+                  <p className="text-white z-10 xs:w-1/2 mdx:w-full text-xl mdx:text-[1.5em] lg:text-[1.5rem] xl:text-[1.5rem] mdx:text-left leading-snug font-['FrankitonSansL'] mt-6">
+                    Dream body. No cardio. No diets. Guaranteed results.
+                  </p>
+                </div>
 
-                <div className="flex flex-col   items-center justify-center mt-10">
+                <div className="flex items-center justify-center mt-10 mdx:justify-start text-left">
                   <h1 className="text-xl py-[2px] font-thin font-['light'] border-b-4 border-[#890900] text-zinc-100 tracking-wide text-center">
                     LET'S GO.
                   </h1>
