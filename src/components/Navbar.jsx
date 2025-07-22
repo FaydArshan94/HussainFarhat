@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-
 import logo from "../assets/logo.png";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Personal Training", href: "#pt" },
-    { name: "Packages", href: "#packages" },
-    { name: "Book", href: "#book" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", to: "/" },
+    { name: "About", to: "/about" },
+    { name: "Personal Training", to: "/personal-training" },
+    { name: "Packages", to: "/packages" },
+    { name: "Book", to: "/book" },
+    { name: "Contact", to: "/contact" },
   ];
 
   return (
     <>
-      <nav className="w-full fixed top-0 left-0 z-50 px-[1rem] py-4 flex items-center justify-between">
+      <nav className="w-full fixed top-0 left-0 z-50 px-[1rem] 3xl:px-[5rem] py-4 flex items-center justify-between ">
         {/* Left: Responsive Logo */}
         <div className="flex items-center">
           <div className="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-32 h-12 sm:h-16 md:h-20 lg:h-24 xl:h-32  flex items-center justify-center text-white font-bold text-lg sm:text-xl md:text-2xl">
@@ -83,7 +83,7 @@ const Navbar = () => {
         }}
       >
         {/* Overlay for better text readability */}
-       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
         {/* Navigation Links */}
         <div className="mt-10 flex flex-col items-end">
           <button
@@ -128,9 +128,9 @@ const Navbar = () => {
           <div className="flex flex-col mt-10 items-end">
             {navigationLinks.map((link, index) => {
               return (
-                <a
+                <NavLink
                   key={link.name}
-                  href={link.href}
+                  to={link.to}
                   className={`flex items-center ${
                     isOpen
                       ? "translate-x-0 opacity-100"
@@ -144,7 +144,7 @@ const Navbar = () => {
                   <h1 className="font-medium uppercase hover:text-[#3D4DBB] transition-colors leading-tight text-5xl text-white font-['Superset']">
                     {link.name}
                   </h1>
-                </a>
+                </NavLink>
               );
             })}
           </div>

@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <footer className="bg-black min-h-screen text-white px-6 py-10 xs:px-20 flex flex-col items-center justify-evenly text-center 2xl:px-32 2xl:py-20">
       {/* Logo */}
-      <div className="flex flex-col items-center space-y-2">
+      <div className="flex flex-col items-center xl:mt-20 space-y-2">
         <img
-          className="w-20 h-20 sm:h-32 sm:w-32 2xl:w-40 2xl:h-40"
+          className="w-20 h-20 sm:h-32 sm:w-32 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48"
           src={logo}
           alt="logo"
         />
-        <div className="text-base tracking-widest text-gray-300 sm:text-2xl 2xl:text-3xl">
+        <div className="text-base tracking-widest text-gray-300 sm:text-2xl xl:text-3xl 2xl:text-3xl">
           THE GLADIOLUS COACHING PROGRAM
         </div>
       </div>

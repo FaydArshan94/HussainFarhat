@@ -100,13 +100,19 @@ const Home = () => {
       const y = e.clientY;
 
       // Shape moves only slightly left/right
-      const xMove = (x / window.innerWidth - 0.5) * 60;
+      const xMove = (x / window.innerWidth - 0.1) * 10;
 
       gsap.to(topShapeRef.current, {
         x: xMove,
         duration: 0.5,
         ease: "power2.out",
+      })
+      gsap.to(bottomShapeRef.current, {
+        x: xMove,
+        duration: 0.5,
+        ease: "power2.out",
       });
+
 
       // Cursor follows the real mouse position
       gsap.to(backCursor.current, {
