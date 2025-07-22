@@ -8,7 +8,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  /* overflow: hidden; */
+  background-color: #0a0a0a;
 }
 
 @theme {
@@ -22,7 +22,43 @@ body {
   --breakpoint-3xl: 1680px;
   --breakpoint-4xl: 1680px;
   --breakpoint-5xl: 2160px;
+}
 
+@keyframes scribble {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.scribble-line {
+  fill: none;
+  stroke: #ff0000;
+  stroke-width: 200;
+  stroke-dasharray: 20000;
+  stroke-dashoffset: 20000;
+  animation: scribble 2.5s ease forwards;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
+.backCursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 80%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.50;
+  transform: translate(-50%, -50%);
+  filter: blur(10px); /* Soft glow */
+  z-index: 0; /* Behind everything */
 }
 
 @font-face {
