@@ -175,7 +175,7 @@ const Home = () => {
 
             <div className="z-10 md:md-1/2  flex flex-col h-full  md:h-fit items-center -translate-y-10 mdx:translate-y-0 mdx:items-start mdx:justify-start px-10">
               <div className="text-center mdx:text-left mdx:w-full">
-                <h1 className="text-[clamp(5rem,15vw,15rem)] md:flex md:flex-col w-full overflow-hidden  lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-none font-['Superset'] text-white tracking-wide">
+                <h1 className="text-[clamp(5rem,15vw,15rem)] flex flex-col w-full overflow-hidden  lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-none font-['Superset'] text-white tracking-wide">
                   <AnimatedLetters text="THE" delay={0} />
                   <AnimatedLetters text="GLADIOLUS" delay={0.3} />
                 </h1>
