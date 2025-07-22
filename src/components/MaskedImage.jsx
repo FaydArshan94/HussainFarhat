@@ -25,7 +25,7 @@ const MaskedImage = ({ animateNow, onReveal }) => {
       const timeout = setTimeout(() => {
         setAnimationDone(true);
         if (onReveal) onReveal(); // tell Home.jsx to start heading animations
-      }, 1000); // match this to your mask animation duration
+      }, 300); // match this to your mask animation duration
       return () => clearTimeout(timeout);
     }
   }, [animateNow, isLoaded]);

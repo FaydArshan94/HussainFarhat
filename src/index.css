@@ -101,3 +101,21 @@ body.no-scroll {
   display: flex;
   gap: 5rem;
 }
+
+.clip-diagonal-top {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 15%);
+}
+
+.clip-diagonal-bottom {
+  clip-path: polygon(0 15%, 100% 100%, 100% 100%, 0 100%);
+}
+
+
+
+/* .clip-diagonal-top {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 10%);
+}
+
+.clip-diagonal-bottom {
+  clip-path: polygon(0 10%, 100% 100%, 100% 100%, 0 100%);
+} */

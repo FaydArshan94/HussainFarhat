@@ -77,22 +77,24 @@ const Page4 = () => {
       });
 
       wordRefs.current.forEach((group) => {
-        if (!group?.length) return;
+        const triggerEl = group?.[0]?.parentNode;
+        if (!group || !group.length || !triggerEl) return;
+
         gsap.from(group, {
           y: 20,
           opacity: 0,
           stagger: 0.02,
           ease: "power2.out",
-          duration: 0.5,
+          duration: 1,
           scrollTrigger: {
-            trigger: group[0]?.parentNode,
+            trigger: triggerEl,
             start: "top bottom",
             toggleActions: "play none none none",
           },
         });
       });
     },
-    { scope: containerRef } // ✅ scoped GSAP hook
+ // ✅ scoped GSAP hook
   );
 
   return (
@@ -107,7 +109,7 @@ const Page4 = () => {
 
             <h3 className="text-5xl uppercase tracking-wide mb-4 font-['Superset'] mdsm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] 2xl:text-[4.5rem]">
               {item.title.split("").map((letter, i) => {
-                if (!letterRefs.current[index]) letterRefs.current[index] = [];
+                letterRefs.current[index] ||= [];
                 return (
                   <span
                     key={i}

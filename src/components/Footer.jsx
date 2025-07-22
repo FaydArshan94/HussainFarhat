@@ -7,7 +7,11 @@ const Footer = () => {
     <footer className="bg-black min-h-screen text-white px-6 py-10 xs:px-20 flex flex-col items-center justify-evenly text-center 2xl:px-32 2xl:py-20">
       {/* Logo */}
       <div className="flex flex-col items-center space-y-2">
-        <img className="w-20 h-20 sm:h-32 sm:w-32 2xl:w-40 2xl:h-40" src={logo} alt="logo" />
+        <img
+          className="w-20 h-20 sm:h-32 sm:w-32 2xl:w-40 2xl:h-40"
+          src={logo}
+          alt="logo"
+        />
         <div className="text-base tracking-widest text-gray-300 sm:text-2xl 2xl:text-3xl">
           THE GLADIOLUS COACHING PROGRAM
         </div>
@@ -22,12 +26,22 @@ const Footer = () => {
 
       {/* Navigation Links */}
       <div className="flex flex-wrap justify-center gap-6 text-lg text-gray-300 mt-10 2sm:mt-28 sm:text-xl sm:gap-10 2xl:text-2xl 2xl:gap-14">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Cookies Policy</a>
-        <a href="#">Personal Training</a>
-        <a href="#">Packages</a>
-        <a href="#">Contact Us</a>
+        {[
+          "Home",
+          "About",
+          "Cookies Policy",
+          "Personal Training",
+          "Packages",
+          "Contact Us",
+        ].map((text) => (
+          <a
+            key={text}
+            href="#"
+            className="relative group overflow-hidden hover:after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 group-hover:after:w-full"
+          >
+            {text}
+          </a>
+        ))}
       </div>
 
       {/* Address and Contact */}
@@ -59,7 +73,10 @@ const Footer = () => {
           <div className="text-xl 2xl:text-3xl">
             <IoMdMail />
           </div>
-          <span>instagram.com/hussein.fht</span>
+          <span className="mail relative group cursor-pointer overflow-hidden">
+            <span className="relative z-10">instagram.com/hussein.fht</span>
+            <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+          </span>
         </div>
       </div>
 

@@ -16,6 +16,7 @@ import fht from "../assets/fht.jpg";
 import Loader from "../components/Loader";
 import MaskedImage from "../components/MaskedImage";
 
+
 const Home = () => {
   const [showMainContent, setShowMainContent] = useState(false);
   const [startImage, setStartImage] = useState(false);
@@ -23,7 +24,7 @@ const Home = () => {
   const landingRef = useRef(null);
 
   const topShapeRef = useRef(null);
-
+  const bottomShapeRef = useRef(null);
   const backCursor = useRef(null);
 
   useEffect(() => {
@@ -49,20 +50,27 @@ const Home = () => {
         onComplete: () => document.body.classList.remove("no-scroll"),
       })
       // 1. Animate shape
-      .to(topShapeRef.current, {
+
+      .to(bottomShapeRef.current, {
         scaleX: 42,
         opacity: 0.8,
         duration: 0.4,
         ease: "power2.inOut",
         onComplete: () => {
-          setStartImage(true); // Only start image animation here
-          // Do NOT call setStartHeadings here!
+          // Start cloudy floating effect after reveal
+          gsap.to(bottomShapeRef.current, {
+            y: 20,
+            x: -10,
+            repeat: -1,
+            yoyo: true,
+            duration: 3,
+            ease: "sine.inOut",
+          });
         },
       })
 
-      // Inside your gsap timeline, after shape animation is done:
       .to(topShapeRef.current, {
-        scaleX: 42,
+        scaleX: 25,
         opacity: 0.8,
         duration: 0.4,
         ease: "power2.inOut",
@@ -80,6 +88,8 @@ const Home = () => {
           });
         },
       });
+
+    // Inside your gsap timeline, after shape animation is done:
   }, []);
 
   useEffect(() => {
@@ -151,21 +161,32 @@ const Home = () => {
         {/* Landing Section */}
         <div
           ref={landingRef}
-          className="landing relative px-[2rem]  flex items-center justify-center h-[110vh] sm:h-[120vh] md:h-[100vh] lg:h-screen xl:h-[130vh] 2xl:h-[120vh] w-full overflow-hidden bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] bg-cover bg-no-repeat bg-center"
+          className="landing relative px-[2rem]  flex items-center justify-center h-[110vh] sm:h-[120vh] md:h-[100vh] lg:h-screen xl:h-[130vh] 2xl:h-[120vh] w-full overflow-hidden bg-[url(https://www.primalstrength.com/cdn/shop/files/gym_design_Headers.jpg?v=1680779429&width=2000)] bg-cover bg-no-repeat bg-center"
         >
           <div ref={backCursor} className="backCursor"></div>
           {/* Shapes */}
           <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
             <div
-              ref={topShapeRef}
+              ref={bottomShapeRef}
               className="
-                absolute right-40 origin-right md:-bottom-10 
+                absolute right-0 md:right-40 origin-right md:-bottom-10 
                 w-full md:w-[2%]  max-w-[900px] h-[250px] md:h-[250px]
                 bg-[#060606] skew-y-12 opacity-0
               "
               style={{ zIndex: 10 }}
             />
+
+            <div
+              ref={topShapeRef}
+              className="
+                absolute hidden md:flex  md:left-20 origin-left md:top-20 
+                w-full md:w-[2%]  max-w-[400px]  md:h-[200px]
+                bg-[red] skew-y-12 opacity-0
+              "
+              style={{ zIndex: 10 }}
+            />
           </div>
+
           {/* Inner Content */}
           <div className="inner   z-40 h-[95vh] md:h-full xl:h-[80%] relative w-full flex flex-col items-center mdx:flex-row md:justify-center mdx:items-center md:px-20 mdx:gap-10 xl:gap-0 sm:w-full">
             <MaskedImage
@@ -180,11 +201,11 @@ const Home = () => {
                   <AnimatedLetters text="GLADIOLUS" delay={0.3} />
                 </h1>
 
-                <h1 className="text-[clamp(5rem,15vw,7rem)]   mdx:text-[7rem] overflow-hidden lg:text-[7rem] xl:text-[9.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-[13vh] 2sm:leading-none font-['Superset'] text-[#890900] tracking-wide">
+                <h1 className="text-[clamp(5rem,15vw,7rem)]   mdx:text-[7rem] overflow-hidden lg:text-[7rem] xl:text-[9.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-[13vh] 2sm:leading-none font-['Superset'] text-[#F82E14] tracking-wide">
                   <AnimatedLetters
                     text="COACHING"
                     delay={0.4}
-                    colorClass="text-[#890900]"
+                    colorClass="text-[#F82E14]"
                   />
                 </h1>
               </div>
@@ -221,7 +242,7 @@ const Home = () => {
                     duration: 0.7,
                     delay: 0.3,
                   }}
-                  className="text-xl py-[2px]  inline-block font-thin font-['light'] border-b-4 border-[#890900] text-zinc-100 tracking-wide"
+                  className="text-xl py-[2px]  inline-block font-thin font-['light'] border-b-4 border-[#F82E14] text-zinc-100 tracking-wide"
                 >
                   LET'S GO.
                 </motion.span>
@@ -238,6 +259,7 @@ const Home = () => {
         <Page6 />
         <Page7 />
         <Footer />
+
       </div>
     </div>
   );
