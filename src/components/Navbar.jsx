@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
+import { useUser } from "../context/UserContext"; // 👈 Import the hook
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { user, logout } = useUser(); // 👈 useUser hook
 
   const navigationLinks = [
     { name: "Home", to: "/" },
@@ -11,6 +15,10 @@ const Navbar = () => {
     { name: "Packages", to: "/packages" },
     { name: "Book", to: "/book" },
     { name: "Contact", to: "/contact" },
+    ...(!user ? [
+    { name: "Login", to: "/login" },
+    { name: "Register", to: "/register" }
+  ] : []),
   ];
 
   return (
@@ -129,7 +137,7 @@ const Navbar = () => {
             {navigationLinks.map((link, index) => {
               return (
                 <NavLink
-                  key={link.name}
+                  key={index}
                   to={link.to}
                   className={`flex items-center ${
                     isOpen
@@ -148,6 +156,17 @@ const Navbar = () => {
               );
             })}
           </div>
+          {user && (
+            <div className="mt-6 text-right">
+              <p className="text-white text-lg mb-2">Hi, {user.name} 👋</p>
+              <button
+                onClick={() => logout()}
+                className="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition"
+              >
+                Logout
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </>
