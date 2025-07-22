@@ -173,14 +173,14 @@ const Home = () => {
               onReveal={() => setStartHeadings(true)}
             />
 
-            <div className="z-10 md:md-1/2  flex flex-col h-full  md:h-fit items-center -translate-y-10 mdx:translate-y-0 mdx:items-start mdx:justify-start px-10">
-              <div className="text-center mdx:text-left mdx:w-full">
-                <h1 className="text-[clamp(5rem,15vw,15rem)] flex flex-col w-full overflow-hidden  lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-none font-['Superset'] text-white tracking-wide">
+            <div className="z-10 md:md-1/2  flex flex-col h-full  md:h-fit items-center xl:h-[85%] -translate-y-10 mdx:translate-y-0 mdx:items-start mdx:justify-start px-10">
+              <div className="text-center w-full mdx:text-left mdx:w-full  ">
+                <h1 className="text-[clamp(4rem,15vw,7rem)] flex flex-col w-full overflow-hidden md:text-[7rem]   lg:text-[7rem] xl:text-[10rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-none font-['Superset'] text-white tracking-wide">
                   <AnimatedLetters text="THE" delay={0} />
                   <AnimatedLetters text="GLADIOLUS" delay={0.3} />
                 </h1>
 
-                <h1 className="text-[clamp(5rem,15vw,8rem)] mdx:text-[8rem] overflow-hidden lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-none font-['Superset'] text-[#890900] tracking-wide">
+                <h1 className="text-[clamp(4rem,15vw,7rem)] mdx:text-[7rem] overflow-hidden lg:text-[7rem] xl:text-[9rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-none font-['Superset'] text-[#890900] tracking-wide">
                   <AnimatedLetters
                     text="COACHING"
                     delay={0.4}
@@ -189,7 +189,7 @@ const Home = () => {
                 </h1>
               </div>
 
-              <p className="text-white text-xl mdx:text-[1.5rem] overflow-hidden xl:w-[25rem] mt-6 leading-snug text-center mdx:text-left font-['FrankitonSansL']">
+              <p className="text-white text-xl mdx:text-[1.5rem] xl:text-[1.8rem] xl:mt-16 overflow-hidden xl:w-[25rem] mt-6 leading-snug text-center mdx:text-left font-['FrankitonSansL']">
                 <motion.span
                   initial={{ y: "100%", opacity: 0 }}
                   animate={
