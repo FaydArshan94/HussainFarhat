@@ -151,7 +151,7 @@ const Home = () => {
         {/* Landing Section */}
         <div
           ref={landingRef}
-          className="landing relative px-[2rem]  flex items-center justify-center h-[110vh] sm:h-[120vh] md:h-[100vh] lg:h-screen 2xl:h-[120vh] w-full overflow-hidden bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] bg-cover bg-no-repeat bg-center"
+          className="landing relative px-[2rem]  flex items-center justify-center h-[110vh] sm:h-[120vh] md:h-[100vh] lg:h-screen xl:h-[130vh] 2xl:h-[120vh] w-full overflow-hidden bg-[url(https://maltapersonaltrainer.com/wp-content/uploads/2023/06/hero-bg-1280x725.jpg)] bg-cover bg-no-repeat bg-center"
         >
           <div ref={backCursor} className="backCursor"></div>
           {/* Shapes */}
@@ -167,20 +167,20 @@ const Home = () => {
             />
           </div>
           {/* Inner Content */}
-          <div className="inner   z-40 h-[90vh] md:h-full relative w-full flex flex-col items-center mdx:flex-row md:justify-center mdx:items-center md:px-20 mdx:gap-10 xl:gap-0 sm:w-full">
+          <div className="inner   z-40 h-[95vh] md:h-full xl:h-[80%] relative w-full flex flex-col items-center mdx:flex-row md:justify-center mdx:items-center md:px-20 mdx:gap-10 xl:gap-0 sm:w-full">
             <MaskedImage
               animateNow={startImage}
               onReveal={() => setStartHeadings(true)}
             />
 
-            <div className="z-10 md:md-1/2  flex flex-col h-full  md:h-fit items-center xl:h-[85%] -translate-y-10 mdx:translate-y-0 mdx:items-start mdx:justify-start px-10">
-              <div className="text-center w-full h-full mdx:text-left mdx:w-full  ">
-                <h1 className="text-[clamp(4rem,15vw,7rem)] flex flex-col w-full h-full overflow-hidden md:text-[7rem]   lg:text-[7rem] xl:text-[10rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-none font-['Superset'] text-white tracking-wide">
+            <div className="z-10 md:md-1/2  flex flex-col h-full  md:h-fit items-center xl:h-full -translate-y-10 mdx:translate-y-0 mdx:items-start mdx:justify-start px-10">
+              <div className="text-center  py-1 w-full h-fit  mdx:text-left mdx:w-full  ">
+                <h1 className="text-[clamp(5rem,15vw,7rem)]   flex flex-col  w-full  overflow-hidden md:text-[7rem]   lg:text-[7rem] xl:text-[9.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-[13vh] 2sm:leading-none font-['Superset'] text-white tracking-wide">
                   <AnimatedLetters text="THE" delay={0} />
                   <AnimatedLetters text="GLADIOLUS" delay={0.3} />
                 </h1>
 
-                <h1 className="text-[clamp(4rem,15vw,7rem)] mdx:text-[7rem] overflow-hidden lg:text-[7rem] xl:text-[9rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-none font-['Superset'] text-[#890900] tracking-wide">
+                <h1 className="text-[clamp(5rem,15vw,7rem)]   mdx:text-[7rem] overflow-hidden lg:text-[7rem] xl:text-[9.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-[13vh] 2sm:leading-none font-['Superset'] text-[#890900] tracking-wide">
                   <AnimatedLetters
                     text="COACHING"
                     delay={0.4}
@@ -189,7 +189,7 @@ const Home = () => {
                 </h1>
               </div>
 
-              <p className="text-white text-xl mdx:text-[1.5rem] xl:text-[1.8rem] xl:mt-16 overflow-hidden xl:w-[25rem] mt-6 leading-snug text-center mdx:text-left font-['FrankitonSansL']">
+              <p className="text-white text-xl mdx:text-[1.5rem] xl:text-[1.5rem] xl:mt-16  overflow-hidden xl:w-[25rem] mt-2 leading-snug text-center mdx:text-left font-['FrankitonSansL']">
                 <motion.span
                   initial={{ y: "100%", opacity: 0 }}
                   animate={
