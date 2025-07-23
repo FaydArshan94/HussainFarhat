@@ -8,6 +8,7 @@ import Book from "../pages/Book";
 import Contact from "../pages/Contact";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import PackageDetails from "../pages/PackageDetails";
 
 const MainRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const MainRoutes = () => {
       <Route path="/about" element={<About />} />
       <Route path="/personal-training" element={<PersonalTraining />} />
       <Route path="/packages" element={<Packages />} />
+      <Route path="/package/:id" element={<PackageDetails />} />
       <Route path="/book" element={<Book />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/register" element={<Register />} />

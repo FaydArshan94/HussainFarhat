@@ -6,18 +6,17 @@ import QuestionsSection from "../components/QuestionsSection";
 import Page7 from "../components/Page7";
 import Footer from "../components/Footer";
 import SplitText from "../hook/SplitText";
+import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import PackageCarousel from "../components/PackageCarousel";
+
 
 const Packages = () => {
   const handleAnimationComplete = () => {};
   const topShapeRef = useRef(null);
   const bottomShapeRef = useRef(null);
   const [showMainContent, setShowMainContent] = useState(true);
-
-  const [showSplitText, setShowSplitText] = useState(false);
-  const [showParagraph, setShowParagraph] = useState(false);
-
-  const [showYour, setShowYour] = useState(false);
-  const [showFitness, setShowFitness] = useState(false);
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -88,6 +87,142 @@ const Packages = () => {
   //   };
   // }, [showMainContent]);
 
+
+  
+  // const sessionData = [
+  //   {
+  //     id: "1on1-1",
+  //     title: "Foundation Build",
+  //     tagline: "Your transformation begins here.",
+  //     image:
+  //       "https://preview.redd.it/natural-hussein-farhat-holding-his-own-against-lifetime-v0-i05gre7y290f1.jpg?width=1080&crop=smart&auto=webp&s=aa0d2013ff7a4b2359970b1c6c244c6ab8a3cd34",
+  //     price: "40€",
+  //     description:
+  //       "This one-on-one package offers dedicated guidance tailored to your needs. You'll receive focused attention during each session, with fully customized workouts geared toward strength building, fat loss, mobility, or endurance. We'll also track progress via InBody scans and adapt your plan as you improve. Nutritional advice and accountability are included to help you stay on track and maximize your results",
+  //     benefits: [
+  //       "Personalized workout plan",
+  //       "Dedicated trainer for the session",
+  //       "Form correction",
+  //       "Motivation and accountability",
+  //     ],
+  //   },
+  //   {
+  //     id: "1on1-5",
+  //     title: "Strength Sculpt",
+  //     tagline: "Your transformation begins here.",
+  //     image:
+  //       "https://preview.redd.it/natural-hussein-farhat-holding-his-own-against-lifetime-v0-i05gre7y290f1.jpg?width=1080&crop=smart&auto=webp&s=aa0d2013ff7a4b2359970b1c6c244c6ab8a3cd34",
+  //     price: "190€",
+  //     description:
+  //       "This one-on-one package offers dedicated guidance tailored to your needs. You'll receive focused attention during each session, with fully customized workouts geared toward strength building, fat loss, mobility, or endurance. We'll also track progress via InBody scans and adapt your plan as you improve. Nutritional advice and accountability are included to help you stay on track and maximize your results",
+  //     benefits: [
+  //       "Progress tracking",
+  //       "Nutrition tips",
+  //       "Flexible schedule",
+  //       "Dedicated support",
+  //     ],
+  //   },
+  //   {
+  //     id: "1on1-10",
+  //     title: "Elite Transformation",
+  //     tagline: "Your transformation begins here.",
+  //     image:
+  //       "https://preview.redd.it/natural-hussein-farhat-holding-his-own-against-lifetime-v0-i05gre7y290f1.jpg?width=1080&crop=smart&auto=webp&s=aa0d2013ff7a4b2359970b1c6c244c6ab8a3cd34",
+  //     price: "350€",
+  //     description:
+  //       "This one-on-one package offers dedicated guidance tailored to your needs. You'll receive focused attention during each session, with fully customized workouts geared toward strength building, fat loss, mobility, or endurance. We'll also track progress via InBody scans and adapt your plan as you improve. Nutritional advice and accountability are included to help you stay on track and maximize your results",
+  //     benefits: [
+  //       "Progress tracking",
+  //       "Nutrition tips",
+  //       "Flexible schedule",
+  //       "Dedicated support",
+  //     ],
+  //   },
+  //   {
+  //     id: "1on1-20",
+  //     title: "Athlete Edge",
+  //     tagline: "Your transformation begins here.",
+  //     image:
+  //       "https://preview.redd.it/natural-hussein-farhat-holding-his-own-against-lifetime-v0-i05gre7y290f1.jpg?width=1080&crop=smart&auto=webp&s=aa0d2013ff7a4b2359970b1c6c244c6ab8a3cd34",
+  //     price: "650€",
+  //     description:
+  //       "This one-on-one package offers dedicated guidance tailored to your needs. You'll receive focused attention during each session, with fully customized workouts geared toward strength building, fat loss, mobility, or endurance. We'll also track progress via InBody scans and adapt your plan as you improve. Nutritional advice and accountability are included to help you stay on track and maximize your results",
+  //     benefits: [
+  //       "Progress tracking",
+  //       "Nutrition tips",
+  //       "Flexible schedule",
+  //       "Dedicated support",
+  //     ],
+  //   },
+  // ];
+
+  // const sessionDataGroup = [
+  //   {
+  //     id: "grp-1",
+  //     title: "Team Burn",
+  //     tagline: "Fuel your fire with team energy.",
+  //     image:
+  //       "https://preview.redd.it/natural-hussein-farhat-holding-his-own-against-lifetime-v0-i05gre7y290f1.jpg?width=1080&crop=smart&auto=webp&s=aa0d2013ff7a4b2359970b1c6c244c6ab8a3cd34",
+  //     price: "40€",
+  //     description:
+  //       "This one-on-one package offers dedicated guidance tailored to your needs. You'll receive focused attention during each session, with fully customized workouts geared toward strength building, fat loss, mobility, or endurance. We'll also track progress via InBody scans and adapt your plan as you improve. Nutritional advice and accountability are included to help you stay on track and maximize your results",
+  //     benefits: [
+  //       "Personalized workout plan",
+  //       "Dedicated trainer for the session",
+  //       "Form correction",
+  //       "Motivation and accountability",
+  //     ],
+  //   },
+  //   {
+  //     id: "grp-5",
+  //     title: "Power Squad",
+  //     tagline: "Train together. Grow stronger.",
+  //     image:
+  //       "https://preview.redd.it/natural-hussein-farhat-holding-his-own-against-lifetime-v0-i05gre7y290f1.jpg?width=1080&crop=smart&auto=webp&s=aa0d2013ff7a4b2359970b1c6c244c6ab8a3cd34",
+  //     price: "190€",
+  //     description:
+  //       "This one-on-one package offers dedicated guidance tailored to your needs. You'll receive focused attention during each session, with fully customized workouts geared toward strength building, fat loss, mobility, or endurance. We'll also track progress via InBody scans and adapt your plan as you improve. Nutritional advice and accountability are included to help you stay on track and maximize your results",
+  //     benefits: [
+  //       "Progress tracking",
+  //       "Nutrition tips",
+  //       "Flexible schedule",
+  //       "Dedicated support",
+  //     ],
+  //   },
+  //   {
+  //     id: "grp-10",
+  //     title: "Core Collective",
+  //     tagline: "Your squad. Your strength.",
+  //     image:
+  //       "https://preview.redd.it/natural-hussein-farhat-holding-his-own-against-lifetime-v0-i05gre7y290f1.jpg?width=1080&crop=smart&auto=webp&s=aa0d2013ff7a4b2359970b1c6c244c6ab8a3cd34",
+  //     price: "350€",
+  //     description:
+  //       "This one-on-one package offers dedicated guidance tailored to your needs. You'll receive focused attention during each session, with fully customized workouts geared toward strength building, fat loss, mobility, or endurance. We'll also track progress via InBody scans and adapt your plan as you improve. Nutritional advice and accountability are included to help you stay on track and maximize your results",
+  //     benefits: [
+  //       "Progress tracking",
+  //       "Nutrition tips",
+  //       "Flexible schedule",
+  //       "Dedicated support",
+  //     ],
+  //   },
+  //   {
+  //     id: "grp-20",
+  //     title: "Endure Together",
+  //     tagline: "Push limits. Celebrate together.",
+  //     image:
+  //       "https://preview.redd.it/natural-hussein-farhat-holding-his-own-against-lifetime-v0-i05gre7y290f1.jpg?width=1080&crop=smart&auto=webp&s=aa0d2013ff7a4b2359970b1c6c244c6ab8a3cd34",
+  //     price: "650€",
+  //     description:
+  //       "This one-on-one package offers dedicated guidance tailored to your needs. You'll receive focused attention during each session, with fully customized workouts geared toward strength building, fat loss, mobility, or endurance. We'll also track progress via InBody scans and adapt your plan as you improve. Nutritional advice and accountability are included to help you stay on track and maximize your results",
+  //     benefits: [
+  //       "Progress tracking",
+  //       "Nutrition tips",
+  //       "Flexible schedule",
+  //       "Dedicated support",
+  //     ],
+  //   },
+  // ];
+
   return (
     <>
       <div className="w-full pkg-main h-full relative">
@@ -130,7 +265,6 @@ const Packages = () => {
               splitType="chars"
               from={{ opacity: 0, y: 40 }}
               to={{ opacity: 1, y: 0 }}
-              
               threshold={0.1}
               rootMargin="-100px"
               // onLetterAnimationComplete={() => setShowFitness(true)} // ➜ show FITNESS next
@@ -145,7 +279,6 @@ const Packages = () => {
               splitType="chars"
               from={{ opacity: 0, y: 40 }}
               to={{ opacity: 1, y: 0 }}
-              
               threshold={0.1}
               rootMargin="-100px"
               onLetterAnimationComplete={handleAnimationComplete} // ➜ then show paragraph
@@ -191,49 +324,9 @@ const Packages = () => {
             advice.
           </p>
 
-          <div className="mt-10 mdx:px-10 3xl:px-32 grid grid-cols-1 2sm:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8 lg:gap-5 xl:gap-10 2xl:gap-16 w-full max-w-8xl">
-            {/* Session 1 */}
-            <div className="border border-blue-600 p-8 2sm:p-16 mdx:p-[1.5rem] lg:p-[2rem] xl:p-[2.5rem] 2xl:p-[2rem] 2xl:py-[3rem] 3xl:p-[5rem]  text-center hover:bg-blue-900 transition">
-              <p className="text-white text-[2rem] mdx:text-[1.2rem] xl:text-[1.5rem] 2xl:text-[2.5rem]  font-['light']">
-                1 SESSION
-              </p>
-              <p className="text-[3rem] mdx:text-[2.5rem] font-['light'] font-bold text-blue-500 mt-2">
-                40€
-              </p>
-            </div>
-
-            {/* Session 5 */}
-            <div className="border border-blue-600 p-8 2sm:p-16 mdx:p-[1.5rem] lg:p-[2rem] xl:p-[2.5rem] 2xl:p-[2rem] 2xl:py-[3rem] 3xl:p-[5rem]  text-center hover:bg-blue-900 transition">
-              <p className="text-white text-[2rem] mdx:text-[1.2rem] xl:text-[1.5rem] 2xl:text-[2.5rem]  font-['light']">
-                5 SESSIONS
-              </p>
-              <p className="text-[3rem] mdx:text-[2.5rem] font-['light'] font-bold text-blue-500 mt-2">
-                190€
-              </p>
-            </div>
-
-            {/* Session 10 */}
-            <div className="border border-blue-600 p-8 2sm:p-16 mdx:p-[1.5rem] lg:p-[2rem] xl:p-[2.5rem] 2xl:p-[2rem] 2xl:py-[3rem] 3xl:p-[5rem]  text-center hover:bg-blue-900 transition">
-              <p className="text-white text-[2rem] mdx:text-[1.2rem] xl:text-[1.5rem] 2xl:text-[2.5rem]  font-['light']">
-                10 SESSIONS
-              </p>
-              <p className="text-[3rem] mdx:text-[2.5rem] font-['light'] font-bold text-blue-500 mt-2">
-                350€
-              </p>
-            </div>
-
-            {/* Session 20 */}
-            <div className="border border-blue-600 p-8 2sm:p-16 mdx:p-[1.5rem] lg:p-[2rem] xl:p-[2.5rem] 2xl:p-[2rem] 2xl:py-[3rem] 3xl:p-[5rem]  text-center hover:bg-blue-900 transition">
-              <p className="text-white text-[2rem] mdx:text-[1.2rem] xl:text-[1.5rem] 2xl:text-[2.5rem]  font-['light']">
-                20 SESSIONS
-              </p>
-              <p className="text-[3rem] mdx:text-[2.5rem] font-['light'] font-bold text-blue-500 mt-2">
-                650€
-              </p>
-            </div>
-          </div>
+          <PackageCarousel />
         </div>
-        <div className="group  min-h-screen w-full bg-black text-white flex flex-col items-center px-4 py-20">
+        <div className="group-coch  min-h-screen w-full bg-black text-white flex flex-col items-center px-4 py-20">
           <h1 className="text-[6rem] font-['Superset'] text-center uppercase mdsm:text-[7rem]  lg:text-9xl xl:[9rem] 2xl:text-[10rem] 3xl:text-[12rem] text-white ">
             Group Training
           </h1>
@@ -243,47 +336,7 @@ const Packages = () => {
             target-driven approach.
           </p>
 
-          <div className="mt-10 mdx:px-10 3xl:px-32 grid grid-cols-1 2sm:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8 lg:gap-5 xl:gap-10 2xl:gap-16 w-full max-w-8xl">
-            {/* Session 1 */}
-            <div className="border border-blue-600 p-8 2sm:p-16 mdx:p-[1.5rem] lg:p-[2rem] xl:p-[2.5rem] 2xl:p-[2rem] 2xl:py-[3rem] 3xl:p-[5rem]  text-center hover:bg-blue-900 transition">
-              <p className="text-white text-[2rem] mdx:text-[1.2rem] xl:text-[1.5rem] 2xl:text-[2.5rem]  font-['light']">
-                Single Session
-              </p>
-              <p className="text-[3rem] mdx:text-[2.5rem] font-['light'] font-bold text-blue-500 mt-2">
-                40€
-              </p>
-            </div>
-
-            {/* Session 5 */}
-            <div className="border border-blue-600 p-8 2sm:p-16 mdx:p-[1.5rem] lg:p-[2rem] xl:p-[2.5rem] 2xl:p-[2rem] 2xl:py-[3rem] 3xl:p-[5rem]  text-center hover:bg-blue-900 transition">
-              <p className="text-white text-[2rem] mdx:text-[1.2rem] xl:text-[1.5rem] 2xl:text-[2.5rem]  font-['light']">
-                5 Session Pack
-              </p>
-              <p className="text-[3rem] mdx:text-[2.5rem] font-['light'] font-bold text-blue-500 mt-2">
-                190€
-              </p>
-            </div>
-
-            {/* Session 10 */}
-            <div className="border border-blue-600 p-8 2sm:p-16 mdx:p-[1.5rem] lg:p-[2rem] xl:p-[2.5rem] 2xl:p-[2rem] 2xl:py-[3rem] 3xl:p-[5rem]  text-center hover:bg-blue-900 transition">
-              <p className="text-white text-[2rem] mdx:text-[1.2rem] xl:text-[1.5rem] 2xl:text-[2.5rem]  font-['light']">
-                10 Session Pack
-              </p>
-              <p className="text-[3rem] mdx:text-[2.5rem] font-['light'] font-bold text-blue-500 mt-2">
-                350€
-              </p>
-            </div>
-
-            {/* Session 20 */}
-            <div className="border border-blue-600 p-8 2sm:p-16 mdx:p-[1.5rem] lg:p-[2rem] xl:p-[2.5rem] 2xl:p-[2rem] 2xl:py-[3rem] 3xl:p-[5rem]  text-center hover:bg-blue-900 transition">
-              <p className="text-white text-[2rem] mdx:text-[1.2rem] xl:text-[1.5rem] 2xl:text-[2.5rem]  font-['light']">
-                20 Session Pack
-              </p>
-              <p className="text-[3rem] mdx:text-[2.5rem] font-['light'] font-bold text-blue-500 mt-2">
-                650€
-              </p>
-            </div>
-          </div>
+        <PackageCarousel />
         </div>
         <QuestionsSection />
         <Page7 />
