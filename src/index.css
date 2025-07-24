@@ -13,6 +13,10 @@ body {
 
 @theme {
   --breakpoint-xs: 400px;
+  --breakpoint-2xs: 410px;
+  --breakpoint-3xs: 540px;
+
+
   --breakpoint-2sm: 577px;
   --breakpoint-mdsm: 768px;
   --breakpoint-md: 988px;
@@ -119,3 +123,12 @@ body.no-scroll {
 .clip-diagonal-bottom {
   clip-path: polygon(0 10%, 100% 100%, 100% 100%, 0 100%);
 } */
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -26,14 +26,14 @@ const Navbar = () => {
       <nav className="w-full fixed top-0 left-0 z-50 px-[1rem] 3xl:px-[5rem] py-4 flex items-center justify-between ">
         {/* Left: Responsive Logo */}
         <div className="flex items-center">
-          <div className="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-32 h-12 sm:h-16 md:h-20 lg:h-24 xl:h-32  flex items-center justify-center text-white font-bold text-lg sm:text-xl md:text-2xl">
+          <div className="w-14 sm:w-16 md:w-20 lg:w-24 xl:w-32 h-12 sm:h-16 md:h-20 lg:h-24 xl:h-32  flex items-center justify-center text-white font-bold text-lg sm:text-xl md:text-2xl">
             <img src={logo} alt="" />
           </div>
         </div>
 
         {/* Right: Responsive Stylish Hamburger SVG */}
         <button
-          className={`flex items-center justify-center focus:outline-none transition-all duration-500 ${
+          className={`flex items-center mr-2 justify-center focus:outline-none transition-all duration-500 ${
             isOpen
               ? "opacity-0 scale-75 pointer-events-none"
               : "opacity-100 scale-100"

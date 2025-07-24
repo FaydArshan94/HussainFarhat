@@ -187,7 +187,7 @@ const Home = () => {
               className="
                 absolute hidden md:flex  md:left-20 origin-left md:top-20 
                 w-full md:w-[2%]  max-w-[400px]  md:h-[200px]
-                bg-[red] skew-y-12 opacity-0
+                bg-red-400 skew-y-12 opacity-0
               "
               style={{ zIndex: 10 }}
             />

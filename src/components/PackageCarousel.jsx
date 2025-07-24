@@ -1,5 +1,3 @@
-// PackageCarousel.jsx
-
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
@@ -8,44 +6,46 @@ import "swiper/css/free-mode";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
+import packages from "../data/packages"; // adjust the path as needed
 
-const sessionData = [
-  {
-    id: "pkg1",
-    title: "Fat Burner Blitz",
-    tagline: "Melt fat fast with 1-on-1 support",
-    imageUrl:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "pkg2",
-    title: "Strength & Power",
-    tagline: "Get ripped with expert strength coaching",
-    imageUrl:
-      "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "pkg3",
-    title: "Group Grind",
-    tagline: "Train hard together, stay motivated",
-    imageUrl:
-      "https://thetitanprinciples.com/wp-content/uploads/2024/08/Uncover-The-Power-Of-Small-Group-Training-_8_11zon.webp",
-  },
-  {
-    id: "pkg4",
-    title: "Elite Transformation",
-    tagline: "Top-tier plan for serious physique goals",
-    imageUrl:
-      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "pkg5",
-    title: "Shred Squad",
-    tagline: "Burn, build, and bond in group sessions",
-    imageUrl:
-      "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80",
-  },
-];
+
+// const sessionData = [
+//   {
+//     id: "pkg1",
+//     title: "Fat Burner Blitz",
+//     tagline: "Melt fat fast with 1-on-1 support",
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
+//   },
+//   {
+//     id: "pkg2",
+//     title: "Strength & Power",
+//     tagline: "Get ripped with expert strength coaching",
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//   },
+//   {
+//     id: "pkg3",
+//     title: "Group Grind",
+//     tagline: "Train hard together, stay motivated",
+//     imageUrl:
+//       "https://thetitanprinciples.com/wp-content/uploads/2024/08/Uncover-The-Power-Of-Small-Group-Training-_8_11zon.webp",
+//   },
+//   {
+//     id: "pkg4",
+//     title: "Elite Transformation",
+//     tagline: "Top-tier plan for serious physique goals",
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=800&q=80",
+//   },
+//   {
+//     id: "pkg5",
+//     title: "Shred Squad",
+//     tagline: "Burn, build, and bond in group sessions",
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80",
+//   },
+// ];
 
 const PackageCarousel = () => {
   return (
@@ -69,7 +69,7 @@ const PackageCarousel = () => {
         }}
         className="w-full"
       >
-        {sessionData.map((pkg) => (
+        {packages.map((pkg) => (
           <SwiperSlide
             key={pkg.id}
             className="flex justify-center items-center px-4" // ensures center alignment
