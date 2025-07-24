@@ -10,6 +10,7 @@ import PackagePlan from "../components/PackagePlan";
 import QuestionsSection from "../components/QuestionsSection";
 import Page7 from "../components/Page7";
 import Footer from "../components/Footer";
+import Reviews from "../components/Reviews";
 
 const PackageDetails = () => {
   // const fatBurnerDetails = [
@@ -191,8 +192,8 @@ const PackageDetails = () => {
         {/* Background Scrolling Text */}
         <div className="back-text absolute -bottom-60 mdsm:-bottom-80 lg:-bottom-96 left-0  overflow-hidden opacity-5 whitespace-nowrap w-full z-50 animate-scroll-x">
           <h1 className="text-[7rem] uppercase  md:text-[8rem] lg:text-[10rem] text-red-800 font-['Superset'] leading-none">
-             GAIN MUSCLE GAIN MUSCLE GAIN MUSCLE GAIN MUSCLE GAIN MUSCLE GAIN MUSCLE
-            GAIN MUSCLE GAIN MUSCLE GAIN
+            GAIN MUSCLE GAIN MUSCLE GAIN MUSCLE GAIN MUSCLE GAIN MUSCLE GAIN
+            MUSCLE GAIN MUSCLE GAIN MUSCLE GAIN
           </h1>
           <h1 className="text-[7rem] uppercase   md:text-[8rem] lg:text-[10rem] text-red-800 font-['Superset'] leading-none">
             {title}
@@ -207,11 +208,10 @@ const PackageDetails = () => {
             {title}
             {title}
           </h1>
-           <h1 className="text-[7rem] uppercase  md:text-[8rem] lg:text-[10rem] text-red-800 font-['Superset'] leading-none">
-             FAT LOSS FAT LOSS FAT LOSS FAT LOSS FAT LOSS FAT LOSS
-            FAT LOSS FAT LOSS FAT
+          <h1 className="text-[7rem] uppercase  md:text-[8rem] lg:text-[10rem] text-red-800 font-['Superset'] leading-none">
+            FAT LOSS FAT LOSS FAT LOSS FAT LOSS FAT LOSS FAT LOSS FAT LOSS FAT
+            LOSS FAT
           </h1>
-         
         </div>
 
         {/* Foreground Main Content */}
@@ -334,6 +334,7 @@ const PackageDetails = () => {
       <PackagePlan />
 
       <QuestionsSection />
+      <Reviews />
       <Page7 />
       <Footer />
     </div>

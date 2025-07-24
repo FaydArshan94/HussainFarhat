@@ -43,7 +43,7 @@ const MaskedImage = ({ animateNow, onReveal }) => {
       animate={{ opacity: startAnimation ? 1 : 0 }}
       transition={{ duration: 0.5 }}
       style={maskStyle}
-      className="w-[30vh] h-[30rem] 2sm:h-[40rem] 2sm:w-[38vh] md:w-[32rem] md:h-[70vh] lg:h-[62vh] lg:w-[30rem] xl:w-[28rem] xl:h-full 2xl:w-[30rem] 2xl:h-[93vh] z-10 shadow-lg"
+      className="w-[40vh] h-[40rem] 2sm:h-[40rem] 2sm:w-[38vh] md:w-[32rem] md:h-[70vh] lg:h-[62vh] lg:w-[30rem] xl:w-[28rem] xl:h-full 2xl:w-[30rem] 2xl:h-[93vh] z-10 shadow-lg"
     >
       <img
         src={fht}

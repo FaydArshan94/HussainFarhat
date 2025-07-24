@@ -51,6 +51,38 @@ const packages = [
         ],
       },
     ],
+    reviews: [
+      {
+        name: "Preeti J.",
+        rating: 5,
+        comment:
+          "Lost 6 kg in 4 weeks with the fat burn plan. It works if you stay consistent!",
+      },
+      {
+        name: "Riya K.",
+        rating: 4,
+        comment:
+          "Loved the Group Grind sessions! Always felt pumped up and supported.",
+      },
+      {
+        name: "Rajeev T.",
+        rating: 3,
+        comment:
+          "Good support, but I needed more 1-on-1 interaction for faster progress.",
+      },
+      {
+        name: "Anjali T.",
+        rating: 5,
+        comment:
+          "The plan was simple, customized, and super effective. Lost 4 inches off my waist!",
+      },
+      {
+        name: "Isha G.",
+        rating: 4,
+        comment:
+          "Had some doubts in the beginning, but the results spoke for themselves.",
+      },
+    ],
   },
   {
     id: "strength-power",
@@ -103,6 +135,32 @@ const packages = [
         ],
       },
     ],
+    reviews: [
+      {
+        name: "Aman R.",
+        rating: 5,
+        comment:
+          "Online coaching kept me on track even while traveling. Great experience!",
+      },
+      {
+        name: "Farhan H.",
+        rating: 4,
+        comment:
+          "Felt like an athlete again. Amazing for people returning to fitness!",
+      },
+      {
+        name: "Nilesh M.",
+        rating: 4,
+        comment:
+          "The app experience was smooth, and check-ins were always on time.",
+      },
+      {
+        name: "Yash D.",
+        rating: 5,
+        comment:
+          "Every week was intense and focused. Loved the no-nonsense training style!",
+      },
+    ],
   },
   {
     id: "muscle-forge",
@@ -112,7 +170,7 @@ const packages = [
     imageUrl: "/images/muscle-build.jpg", // Replace with your actual image path
     price: "₹3,499",
     description:
-      "An advanced hypertrophy-focused training program tailored to help you build muscle, gain strength, and sculpt a powerful physique. Includes structured progression, nutrition support, and expert guidance.",
+      "An advanced hypertrophy-focused training program tailored to help you build muscle, gain strength.",
     moreDetails: [
       {
         title: " Personalized Muscle Gain Nutrition",
@@ -155,6 +213,38 @@ const packages = [
         ],
       },
     ],
+    reviews: [
+      {
+        name: "Sneha M.",
+        rating: 5,
+        comment:
+          "The muscle gain plan helped me build lean muscle without fat. Loved it!",
+      },
+      {
+        name: "Nikita S.",
+        rating: 5,
+        comment:
+          "Training with the transformation package completely changed my body and mindset!",
+      },
+      {
+        name: "Zoya A.",
+        rating: 5,
+        comment:
+          "Transformation coaching made me stronger and more confident than ever!",
+      },
+      {
+        name: "Megha D.",
+        rating: 4,
+        comment:
+          "Loved the flexibility of the workout schedule in the transformation plan.",
+      },
+      {
+        name: "Tanya V.",
+        rating: 5,
+        comment:
+          "Transformation package gave me structure, accountability, and results!",
+      },
+    ],
   },
 
   {
@@ -165,7 +255,7 @@ const packages = [
     imageUrl: "/images/comp-prep.jpg",
     price: "₹4,999",
     description:
-      "A specialized online coaching program designed to get you stage-ready with strategic training, posing, nutrition, and peak week protocols. Ideal for serious lifters aiming for physique or bodybuilding competitions.",
+      "A specialized online coaching program designed to get you stage-ready.",
     moreDetails: [
       {
         title: "Advanced Nutrition & Cutting Strategy",
@@ -218,7 +308,159 @@ const packages = [
         ],
       },
     ],
+    reviews: [
+      {
+        name: "Sarthak Y.",
+        rating: 5,
+        comment: "Peak week guidance was spot on. Nailed my conditioning!",
+      },
+      {
+        name: "Harsh V.",
+        rating: 4,
+        comment:
+          "Loved the detailed diet breakdown in the bodybuilding prep package.",
+      },
+      {
+        name: "Vikrant S.",
+        rating: 5,
+        comment:
+          "Bodybuilding prep plan was on point! Nailed my first competition!",
+      },
+      {
+        name: "Karan P.",
+        rating: 5,
+        comment:
+          "Never thought I could get abs at 30. Thanks to the online coaching package!",
+      },
+      {
+        name: "Manav B.",
+        rating: 5,
+        comment:
+          "Competition prep was next level. Peak week strategy was gold!",
+      },
+    ],
   },
 ];
 
 export default packages;
+
+[
+  {
+    name: "Sarthak Y.",
+    rating: 5,
+    comment: "Peak week guidance was spot on. Nailed my conditioning!",
+  },
+  {
+    name: "Riya K.",
+    rating: 4,
+    comment:
+      "Loved the Group Grind sessions! Always felt pumped up and supported.",
+  },
+  {
+    name: "Aman R.",
+    rating: 5,
+    comment:
+      "Online coaching kept me on track even while traveling. Great experience!",
+  },
+  {
+    name: "Sneha M.",
+    rating: 5,
+    comment:
+      "The muscle gain plan helped me build lean muscle without fat. Loved it!",
+  },
+  {
+    name: "Harsh V.",
+    rating: 4,
+    comment:
+      "Loved the detailed diet breakdown in the bodybuilding prep package.",
+  },
+  {
+    name: "Nikita S.",
+    rating: 5,
+    comment:
+      "Training with the transformation package completely changed my body and mindset!",
+  },
+  {
+    name: "Rajeev T.",
+    rating: 3,
+    comment:
+      "Good support, but I needed more 1-on-1 interaction for faster progress.",
+  },
+  {
+    name: "Preeti J.",
+    rating: 5,
+    comment:
+      "Lost 6 kg in 4 weeks with the fat burn plan. It works if you stay consistent!",
+  },
+  {
+    name: "Karan P.",
+    rating: 5,
+    comment:
+      "Never thought I could get abs at 30. Thanks to the online coaching package!",
+  },
+  {
+    name: "Megha D.",
+    rating: 4,
+    comment:
+      "Loved the flexibility of the workout schedule in the transformation plan.",
+  },
+  {
+    name: "Vikrant S.",
+    rating: 5,
+    comment:
+      "Bodybuilding prep plan was on point! Nailed my first competition!",
+  },
+  {
+    name: "Alia R.",
+    rating: 5,
+    comment:
+      "Group workouts are so motivating. Trainer's energy is unbeatable!",
+  },
+  {
+    name: "Nilesh M.",
+    rating: 4,
+    comment:
+      "The app experience was smooth, and check-ins were always on time.",
+  },
+  {
+    name: "Zoya A.",
+    rating: 5,
+    comment:
+      "Transformation coaching made me stronger and more confident than ever!",
+  },
+  {
+    name: "Farhan H.",
+    rating: 4,
+    comment:
+      "Felt like an athlete again. Amazing for people returning to fitness!",
+  },
+  {
+    name: "Anjali T.",
+    rating: 5,
+    comment:
+      "The plan was simple, customized, and super effective. Lost 4 inches off my waist!",
+  },
+  {
+    name: "Yash D.",
+    rating: 5,
+    comment:
+      "Every week was intense and focused. Loved the no-nonsense training style!",
+  },
+  {
+    name: "Isha G.",
+    rating: 4,
+    comment:
+      "Had some doubts in the beginning, but the results spoke for themselves.",
+  },
+  {
+    name: "Manav B.",
+    rating: 5,
+    comment: "Competition prep was next level. Peak week strategy was gold!",
+  },
+  {
+    name: "Tanya V.",
+    rating: 5,
+    comment:
+      "Transformation package gave me structure, accountability, and results!",
+  },
+];
