@@ -13,7 +13,6 @@ const Navbar = () => {
     { name: "Home", to: "/" },
     { name: "About", to: "/about" },
     { name: "Packages", to: "/packages" },
-    { name: "Contact", to: "/contact" },
     ...(!currentUser ? [{ name: "Login", to: "/login" }] : []),
   ];
 

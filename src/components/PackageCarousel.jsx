@@ -129,7 +129,7 @@ const PackageCarousel = () => {
               className="w-full h-full object-cover brightness-75 group-hover:brightness-100 transition-all duration-500"
             />
             <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center px-4 text-center text-white">
-              <h3 className="text-2xl font-bold font-['Superset'] drop-shadow-md">
+              <h3 className="text-5xl uppercase  font-['Superset'] drop-shadow-md">
                 {pkg.title}
               </h3>
               <p className="mt-2 text-sm text-gray-200 max-w-xs">

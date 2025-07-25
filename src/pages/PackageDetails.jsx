@@ -54,7 +54,7 @@ const PackageDetails = () => {
         {/* Hero Content */}
         <div className="content z-10 w-full px-4 sm:px-10 md:px-16 xl:px-20 flex flex-col items-center justify-center text-center">
           <div className="w-full max-w-[90vw] sm:max-w-[80vw] md:max-w-[70vw] xl:max-w-[60vw]">
-            <h1 className="leading-none font-['Superset'] text-[2.5rem] sm:text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] break-words">
+            <h1 className="leading-none font-['Superset'] uppercase text-[6rem] sm:text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] break-words">
               {title}
             </h1>
           </div>
@@ -81,7 +81,7 @@ const PackageDetails = () => {
         </div>
       </div>
 
-      <div className="tagline  w-full h-[110vh] mdsm:h-[70vh] xl:h-[60vh] py-10">
+      <div className="tagline  w-full h-[70vh]  mdsm:h-[70vh] xl:h-[60vh] py-10">
         {/* Background Scrolling Text */}
         <div className="back-text absolute -bottom-60 mdsm:-bottom-80 lg:-bottom-96 left-0  overflow-hidden opacity-5 whitespace-nowrap w-full z-50 animate-scroll-x">
           <h1 className="text-[7rem] uppercase  md:text-[8rem] lg:text-[10rem] text-red-800 font-['Superset'] leading-none">

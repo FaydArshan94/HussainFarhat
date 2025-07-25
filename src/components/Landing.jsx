@@ -29,7 +29,7 @@ const Landing = () => {
           COACHING
         </h1>
 
-        <p className="text-center text-[0.8rem] 2sm:text-[1rem] mdsm:text-[1.3rem] font-['light'] w-[70%] mt-4">
+        <p className="text-center text-[1rem] 2sm:text-[1rem] mdsm:text-[1.3rem] font-['light'] w-[70%] mt-4">
           <motion.span
             initial={{ y: "100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

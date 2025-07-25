@@ -58,7 +58,7 @@ const { refreshUser } = useUser();
   return (
     <section className="px-6 text-white">
       <div className="max-w-7xl mx-auto py-20">
-        <h2 className="text-5xl md:text-7xl xl:text-[6rem] font-['Superset'] uppercase text-center mb-20 text-white">
+        <h2 className="text-8xl md:text-7xl xl:text-[6rem] font-['Superset'] uppercase text-center mb-20 text-white">
           Choose Your Plan
         </h2>
 

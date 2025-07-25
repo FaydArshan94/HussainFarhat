@@ -36,7 +36,7 @@ const Page7 = () => {
 
       {/* Foreground Content with Animation */}
       <div className="z-10 max-w-2xl px-10 flex flex-col  items-center justify-center text-center overflow-hidden w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:max-w-4xl">
-        <h1 className="text-[7.5rem] 2sm:text-[8rem] leading-[8rem] font-['Superset'] origin-left w-full  md:text-[10rem] md:leading-[12rem] lg:text-[10rem  xl:text-[12rem] xl:leading-[14rem] break-words">
+        <h1 className="text-[7.5rem] 2sm:text-[8rem] leading-[8.5rem] font-['Superset'] origin-left w-full  md:text-[10rem] md:leading-[12rem] lg:text-[10rem  xl:text-[12rem] xl:leading-[14rem] break-words">
           DON'T PUT IT OFF
         </h1>
 

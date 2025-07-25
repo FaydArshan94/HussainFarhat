@@ -1,18 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import SplitText from "../hook/SplitText";
 import { motion } from "framer-motion";
 import Page7 from "../components/Page7";
 import Footer from "../components/Footer";
 import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import CoreValues from "../components/CoreValues";
+import hussain from "../assets/hussain.jpg";
 
 const About = () => {
-  const handleAnimationComplete = () => {};
-  const topShapeRef = useRef(null);
-  const bottomShapeRef = useRef(null);
-  const [showMainContent, setShowMainContent] = useState(true);
   const imgRef = useRef(null);
   const imgRef2 = useRef(null);
 
@@ -51,9 +45,9 @@ const About = () => {
           </div>
 
           <div className="content z-10 px-[1.5rem] 2sm:px-20 flex text-white flex-col items-center justify-center">
-            <h1 className="text-[9rem] mdsm:text-[12rem] mdx:text-[12rem] leading-none font-['Superset'] text-center">ABOUT US</h1>
-
-            
+            <h1 className="text-[9rem] mdsm:text-[12rem] mdx:text-[12rem] leading-none font-['Superset'] text-center">
+              ABOUT US
+            </h1>
 
             <p className="text-center 2sm:text-[1.2rem] mdsm:text-[1.3rem] font-['light'] w-[70%] mt-4">
               <motion.span
@@ -105,12 +99,12 @@ const About = () => {
 
             <div className="flex flex-col md:flex-row gap-10 items-center justify-center mb-16">
               <img
-                src="src\assets\olympia.jpg" // Add your image here
+                src={hussain} // Add your image here
                 alt="Hussain Farhat"
                 className="w-64 h-64 object-cover rounded-full border-4 border-red-500 shadow-lg"
               />
               <div className="space-y-4 text-center md:text-left">
-                <h2 className="text-2xl font-semibold text-white">
+                <h2 className="text-7xl font-['Superset'] uppercase  text-white">
                   Hussain Farhat
                 </h2>
                 <p className="text-gray-400">
@@ -159,8 +153,8 @@ const About = () => {
                   className="w-20 h-20 rounded-full object-cover"
                 />
                 <div>
-                  <p className="text-red-500 font-bold text-sm">YOUTUBE</p>
-                  <h3 className="text-xl font-semibold text-white">
+                  <p className="text-red-500 font-bold font-['light'] text-sm">YOUTUBE</p>
+                  <h3 className="text-xl font-['light'] font-semibold text-white">
                     HUSSAIN FARHAT
                   </h3>
                   <p className="text-gray-400 text-sm">428K Subscribers</p>
@@ -185,8 +179,8 @@ const About = () => {
                   className="w-20 h-20 rounded-full object-cover"
                 />
                 <div>
-                  <p className="text-blue-400 font-bold text-sm">INSTAGRAM</p>
-                  <h3 className="text-xl font-semibold text-white">
+                  <p className="text-blue-400 font-bold font-['light'] text-sm">INSTAGRAM</p>
+                  <h3 className="text-xl font-['light'] font-semibold text-white">
                     HUSSAIN FARHAT
                   </h3>
                   <p className="text-gray-400 text-sm">2.7M Followers</p>
