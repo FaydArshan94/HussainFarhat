@@ -35,9 +35,6 @@ const PackageDetails = () => {
     moreDetails = [],
   } = pkg;
 
-  const topShapeRef = useRef(null);
-  const bottomShapeRef = useRef(null);
-
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -45,8 +42,8 @@ const PackageDetails = () => {
         {/* Background image */}
         <div className="bg-img absolute top-0 left-0 z-0 h-full w-full">
           <img
-            className="w-full h-full object-cover object-top-right"
-            src="https://www.primalstrength.com/cdn/shop/files/gym_design_Headers.jpg?v=1680779429&width=2000"
+            className="w-full opacity-40 h-full object-cover object-top-right"
+            src={imageUrl}
             alt=""
           />
         </div>
@@ -54,9 +51,18 @@ const PackageDetails = () => {
         {/* Hero Content */}
         <div className="content z-10 w-full px-4 sm:px-10 md:px-16 xl:px-20 flex flex-col items-center justify-center text-center">
           <div className="w-full max-w-[90vw] sm:max-w-[80vw] md:max-w-[70vw] xl:max-w-[60vw]">
-            <h1 className="leading-none font-['Superset'] uppercase text-[6rem] sm:text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] break-words">
+            <motion.h1
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                ease: [0.22, 1, 0.36, 1],
+                duration: 0.7,
+                delay: 1, // slightly delayed after headings
+              }}
+              className="leading-none font-['Superset'] uppercase text-[6rem] sm:text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] break-words"
+            >
               {title}
-            </h1>
+            </motion.h1>
           </div>
 
           <p className="text-[1.2rem] md:text-[1.5rem] xl:text-[1.8rem] font-light mt-4 w-[70%]">
@@ -74,9 +80,11 @@ const PackageDetails = () => {
             initial={{ y: "100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ ease: [0.22, 1, 0.36, 1], duration: 0.7, delay: 1 }}
-            className="text-xl mdsm:text-[1.5rem] py-2 mt-8 inline-block font-light border-b-4 border-[#F82E14]"
+            className="text-xl group relative mdsm:text-[1.5rem] py-2 mt-8 inline-block font-light "
           >
             LET'S GO.
+            <span className="absolute bottom-0 left-0 h-[3px] w-full bg-red-400 origin-left z-0" />
+            <span className="absolute bottom-0 left-0 h-[3px] w-full bg-green-400 origin-left z-10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
           </motion.span>
         </div>
       </div>

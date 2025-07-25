@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate, useParams } from "react-router-dom";
 import packages from "../data/packages";
 import { useUser } from "../context/UserContext";
+import { toast } from 'react-toastify';
 gsap.registerPlugin(ScrollTrigger);
 
 const allFeatures = [
@@ -135,9 +136,8 @@ const { refreshUser } = useUser();
                   );
 
                   refreshUser();
-                  alert(
-                    `✅ ${plan.name} plan added under ${packageName} package!`
-                  );
+                  toast.success("Package added successfully!");
+                  navigate("/profile")
                   // Optional: navigate("/profile");
                 }}
                 className="mt-auto w-full text-center py-3 text-white font-semibold text-sm tracking-wide uppercase transition hover:scale-105 group"

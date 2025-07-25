@@ -5,6 +5,10 @@ import Footer from "../components/Footer";
 import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import CoreValues from "../components/CoreValues";
 import hussain from "../assets/hussain.jpg";
+import youtube from "../assets/youtube.jpg";
+import instagram from "../assets/instagram.jpg";
+
+
 
 const About = () => {
   const imgRef = useRef(null);
@@ -45,9 +49,18 @@ const About = () => {
           </div>
 
           <div className="content z-10 px-[1.5rem] 2sm:px-20 flex text-white flex-col items-center justify-center">
-            <h1 className="text-[9rem] mdsm:text-[12rem] mdx:text-[12rem] leading-none font-['Superset'] text-center">
+            <motion.h1
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                ease: [0.22, 1, 0.36, 1],
+                duration: 0.7,
+                delay: 1, // slightly delayed after headings
+              }}
+              className="text-[9rem] mdsm:text-[12rem] mdx:text-[12rem] leading-none font-['Superset'] text-center"
+            >
               ABOUT US
-            </h1>
+            </motion.h1>
 
             <p className="text-center 2sm:text-[1.2rem] mdsm:text-[1.3rem] font-['light'] w-[70%] mt-4">
               <motion.span
@@ -56,7 +69,7 @@ const About = () => {
                 transition={{
                   ease: [0.22, 1, 0.36, 1],
                   duration: 0.7,
-                  delay: 1, // slightly delayed after headings
+                  delay: 1.5, // slightly delayed after headings
                 }}
                 className="origin-left inline-block "
               >
@@ -70,11 +83,13 @@ const About = () => {
               transition={{
                 ease: [0.22, 1, 0.36, 1],
                 duration: 0.7,
-                delay: 1,
+                delay: 1.5,
               }}
-              className="text-xl mdsm:text-[1.5rem] py-[2px] mt-8 inline-block font-thin font-['light'] border-b-4 border-[#F82E14] text-zinc-100 tracking-wide"
+              className="text-xl group relative mdsm:text-[1.5rem] py-[2px] mt-8 inline-block font-thin font-['light']  text-zinc-100 tracking-wide"
             >
               LET'S GO.
+              <span className="absolute bottom-0 left-0 h-[3px] w-full bg-red-400 origin-left z-0" />
+              <span className="absolute bottom-0 left-0 h-[3px] w-full bg-green-400 origin-left z-10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
             </motion.span>
           </div>
         </div>
@@ -112,7 +127,7 @@ const About = () => {
                 </p>
                 <div className="flex gap-6 justify-center md:justify-start text-red-500 text-2xl">
                   <a
-                    href="https://www.instagram.com/hussainfarhat/"
+                    href="https://www.instagram.com/hussein.fht?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -120,7 +135,15 @@ const About = () => {
                     <FaInstagram />
                   </a>
                   <a
-                    href="https://www.facebook.com/hussainfarhat"
+                    href="https://www.youtube.com/@Hussein.fht1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                  >
+                    <FaYoutube />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/p/HusseinFarhat-61553238483150/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
@@ -128,32 +151,31 @@ const About = () => {
                     <FaFacebook />
                   </a>
                   <a
-                    href="https://twitter.com/hussainfarhat"
+                    href="https://www.instagram.com/hussein.fht?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Twitter"
                   >
                     <FaTwitter />
                   </a>
-                  <a href="www.youtube.com/@Hussein.fht1" aria-label="YouTube">
-                    <FaYoutube />
-                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-lg md:max-w-4xl mx-auto px-4">
             {/* YouTube Card */}
             <div className="bg-[#0f0f0f] rounded-xl flex flex-col items-center gap-3  md:flex md:items-center md:justify-between p-6 shadow-md border border-red-600">
               <div className="flex items-center gap-6">
                 <img
-                  src="https://yt3.googleusercontent.com/bjWjwzYxkxd2rohDlVqX3xVoKWofZ83vUWq-lu82vS7fOUxFredYYp1zB9sK1QRf-Kytt0dtlw=s160-c-k-c0x00ffffff-no-rj" // replace with real image or static avatar
+                  src={youtube} // replace with real image or static avatar
                   alt="Hussain Farhat"
                   className="w-20 h-20 rounded-full object-cover"
                 />
                 <div>
-                  <p className="text-red-500 font-bold font-['light'] text-sm">YOUTUBE</p>
+                  <p className="text-red-500 font-bold font-['light'] text-sm">
+                    YOUTUBE
+                  </p>
                   <h3 className="text-xl font-['light'] font-semibold text-white">
                     HUSSAIN FARHAT
                   </h3>
@@ -161,7 +183,7 @@ const About = () => {
                 </div>
               </div>
               <a
-                href="www.youtube.com/@Hussein.fht1"
+                href="https://www.youtube.com/@Hussein.fht1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-red-600 hover:bg-red-700 text-white md:px-4 md:py-2 px-2 py-1 rounded-full font-semibold"
@@ -174,12 +196,14 @@ const About = () => {
             <div className="bg-[#0f0f0f] rounded-xl flex flex-col items-center gap-3  md:flex md:items-center md:justify-between p-6 shadow-md border border-blue-600">
               <div className="flex items-center gap-6">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6T9_e-1LT3ohko1Q6MCIC4i55VR5buMaoxw&s" // Replace with Hussain’s Insta-style image
+                  src={instagram} // Replace with Hussain’s Insta-style image
                   alt="Hussain Farhat"
                   className="w-20 h-20 rounded-full object-cover"
                 />
                 <div>
-                  <p className="text-blue-400 font-bold font-['light'] text-sm">INSTAGRAM</p>
+                  <p className="text-blue-400 font-bold font-['light'] text-sm">
+                    INSTAGRAM
+                  </p>
                   <h3 className="text-xl font-['light'] font-semibold text-white">
                     HUSSAIN FARHAT
                   </h3>
@@ -187,7 +211,7 @@ const About = () => {
                 </div>
               </div>
               <a
-                href="https://instagram.com/hussainfarhat"
+                href="https://www.instagram.com/hussein.fht?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-500 hover:bg-blue-600 text-white md:px-4 md:py-2 px-2 py-1 rounded-full font-semibold"

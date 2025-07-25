@@ -78,7 +78,7 @@ const Page3 = () => {
           src="https://maltapersonaltrainer.com/wp-content/uploads/2023/07/what-we-do.mp4"
         ></video>
 
-        <div className="w-full h-full bg-black/90 absolute left-0 top-0"></div>
+        <div className="w-full h-full bg-black/10 md:bg-black/80 absolute left-0 top-0"></div>
 
         <div className="w-full px-[1rem]  absolute top-1/2 -translate-y-1/2 left-0 md:top-1/2 md:-translate-y-1/2 flex flex-col md:flex-row md:items-end md:justify-evenly lg:justify-between xl:justify-center md:gap-[3rem] 2xl:gap-[7rem] justify-center    ">
           <div ref={Whatref} className="">

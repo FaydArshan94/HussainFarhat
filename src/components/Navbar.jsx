@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
-import { useUser } from "../context/UserContext"; // 👈 Import the hook
+import { useUser } from "../context/UserContext"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { currentUser, logout } = useUser(); // 👈 useUser hook
-  console.log(currentUser);
-
+  const { currentUser, logout } = useUser(); 
   const navigationLinks = [
     { name: "Home", to: "/" },
     { name: "About", to: "/about" },

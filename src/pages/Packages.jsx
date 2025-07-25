@@ -30,9 +30,18 @@ const Packages = () => {
           </div>
 
           <div className="content z-10 px-[1.5rem] 2sm:px-20 flex text-white flex-col items-center justify-center">
-            <h1 className="text-[9rem] mdsm:text-[12rem] mdx:text-[12rem] leading-none font-['Superset'] text-center">
+            <motion.h1
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                ease: [0.22, 1, 0.36, 1],
+                duration: 0.7,
+                delay: 1, // slightly delayed after headings
+              }}
+              className="text-[9rem] mdsm:text-[12rem] mdx:text-[12rem] leading-none font-['Superset'] text-center"
+            >
               PACKAGES
-            </h1>
+            </motion.h1>
 
             <p className="text-center 2sm:text-[1.2rem] mdsm:text-[1.3rem] font-['light'] w-[70%] mt-4">
               <motion.span
@@ -41,7 +50,7 @@ const Packages = () => {
                 transition={{
                   ease: [0.22, 1, 0.36, 1],
                   duration: 0.7,
-                  delay: 1, // slightly delayed after headings
+                  delay: 1.5, // slightly delayed after headings
                 }}
                 className="origin-left inline-block "
               >
@@ -56,11 +65,13 @@ const Packages = () => {
               transition={{
                 ease: [0.22, 1, 0.36, 1],
                 duration: 0.7,
-                delay: 1,
+                delay: 1.5,
               }}
-              className="text-xl mdsm:text-[1.5rem] py-[2px] mt-8 inline-block font-thin font-['light'] border-b-4 border-[#F82E14] text-zinc-100 tracking-wide"
+              className="text-xl relative group mdsm:text-[1.5rem] py-[2px] mt-8 inline-block font-thin font-['light']  text-zinc-100 tracking-wide"
             >
               LET'S GO.
+              <span className="absolute bottom-0 left-0 h-[3px] w-full bg-red-400 origin-left z-0" />
+              <span className="absolute bottom-0 left-0 h-[3px] w-full bg-green-400 origin-left z-10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
             </motion.span>
           </div>
         </div>
@@ -74,9 +85,8 @@ const Packages = () => {
             your goals, and your mindset. <br className="hidden md:block" />
             Every rep. Every session. Zero distractions. All progress.
           </p>
-        <PackageCarousel />
+          <PackageCarousel />
         </div>
-
 
         <QuestionsSection />
         <Page7 />

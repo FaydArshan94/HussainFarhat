@@ -12,6 +12,7 @@ const Register = () => {
 
   const { planName } = useParams();
   const selectedPlan = planName || "Starter";
+
   const onSubmit = (data) => {
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -25,89 +26,77 @@ const Register = () => {
       return;
     }
 
-    // Add selected plan
     data.plan = selectedPlan;
 
-    // Save user
     users.push(data);
     localStorage.setItem("users", JSON.stringify(users));
 
-    // Auto-login
     login(data);
-
-    navigate("/profile"); // 👈 or "/"
+    navigate("/profile");
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-400 to-pink-500 px-4">
-      <div className="w-full max-w-md bg-white text-gray-800 rounded-xl shadow-lg p-8">
-        <h2 className="text-3xl font-bold text-center mb-6 text-purple-600">
+    <div className="flex items-center justify-center min-h-screen bg-black px-4 py-16">
+      <div className="w-full max-w-md bg-[#121212] text-white rounded-2xl shadow-xl p-8 border border-[#F82E14]">
+        <h2 className="text-5xl text-center mb-6 text-[#F82E14] font-['Superset'] uppercase">
           Register & Start Training
         </h2>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-          {/* Name */}
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           <input
             type="text"
             placeholder="Name"
             {...register("name", { required: "Name is required" })}
-            className="w-full px-4 py-2 border rounded-md"
+            className="w-full px-4 py-2 bg-[#1a1a1a] text-white border border-gray-600 rounded-md focus:outline-none focus:border-[#F82E14]"
           />
 
-          {/* Email */}
           <input
             type="email"
             placeholder="Email"
             {...register("email", { required: "Email is required" })}
-            className="w-full px-4 py-2 border rounded-md"
+            className="w-full px-4 py-2 bg-[#1a1a1a] text-white border border-gray-600 rounded-md focus:outline-none focus:border-[#F82E14]"
           />
 
-          {/* Password */}
           <input
             type="password"
             placeholder="Password"
             {...register("password", { required: "Password is required" })}
-            className="w-full px-4 py-2 border rounded-md"
+            className="w-full px-4 py-2 bg-[#1a1a1a] text-white border border-gray-600 rounded-md focus:outline-none focus:border-[#F82E14]"
           />
 
-          {/* Age */}
           <input
             type="number"
             placeholder="Age"
             {...register("age", { required: "Age is required" })}
-            className="w-full px-4 py-2 border rounded-md"
+            className="w-full px-4 py-2 bg-[#1a1a1a] text-white border border-gray-600 rounded-md focus:outline-none focus:border-[#F82E14]"
           />
 
-          {/* Gender */}
           <select
             {...register("gender")}
-            className="w-full px-4 py-2 border rounded-md"
+            className="w-full px-4 py-2 bg-[#1a1a1a] text-white border border-gray-600 rounded-md focus:outline-none focus:border-[#F82E14]"
           >
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
           </select>
 
-          {/* Weight */}
           <input
             type="number"
             placeholder="Weight (kg)"
             {...register("weight", { required: "Weight is required" })}
-            className="w-full px-4 py-2 border rounded-md"
+            className="w-full px-4 py-2 bg-[#1a1a1a] text-white border border-gray-600 rounded-md focus:outline-none focus:border-[#F82E14]"
           />
 
-          {/* Height */}
           <input
             type="number"
             placeholder="Height (cm)"
             {...register("height", { required: "Height is required" })}
-            className="w-full px-4 py-2 border rounded-md"
+            className="w-full px-4 py-2 bg-[#1a1a1a] text-white border border-gray-600 rounded-md focus:outline-none focus:border-[#F82E14]"
           />
 
-          {/* Goal */}
           <select
             {...register("goal")}
-            className="w-full px-4 py-2 border rounded-md"
+            className="w-full px-4 py-2 bg-[#1a1a1a] text-white border border-gray-600 rounded-md focus:outline-none focus:border-[#F82E14]"
           >
             <option value="fat loss">Fat Loss</option>
             <option value="muscle gain">Muscle Gain</option>
@@ -117,10 +106,9 @@ const Register = () => {
           {/* Hidden Plan */}
           <input type="hidden" value={selectedPlan} {...register("plan")} />
 
-          {/* Submit */}
           <button
             type="submit"
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-md font-semibold transition duration-300"
+            className="w-full bg-[#F82E14] hover:bg-[#d02611] text-white py-2 rounded-md font-semibold transition duration-300"
           >
             Register Now
           </button>
