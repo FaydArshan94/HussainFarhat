@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
 const items = ["FAT LOSS", "MUSCLE BUILDING", "HEALTHY LIFESTYLE"];
 
 const generateItems = () => (
@@ -10,17 +9,17 @@ const generateItems = () => (
       <React.Fragment key={idx}>
         <motion.h1
           whileHover={{
-            color: "#890900", // Fill color on hover
-            scale: 1.05, // Slight zoom
-            textShadow: "0px 0px 15px #890900", // Optional glow
+            color: "#890900",
+            scale: 1.05,
+            textShadow: "0px 0px 15px #890900",
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
           style={{
             WebkitTextStroke: "1.5px #F7FCFB",
-            color: "transparent",
+            color: "rgba(137, 9, 0, 0)", // ✅ Instead of 'transparent'
           }}
           className="inline-block font-['Superset'] text-[7.5rem] px-16 
-            sm:text-[8rem] md:text-[9rem] lg:text-[10rem] xl:text-[11rem] 2xl:text-[11rem]"
+    sm:text-[8rem] md:text-[9rem] lg:text-[10rem] xl:text-[11rem] 2xl:text-[11rem]"
         >
           {item}
         </motion.h1>

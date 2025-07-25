@@ -64,7 +64,7 @@ const Loader = ({ onComplete }) => {
       />
       <h1
         ref={headingRef}
-        className="font-[light] text-5xl text-zinc-200 flex gap-1 flex-wrap justify-center"
+        className="font-['light'] text-xl md:text-5xl text-zinc-200 flex gap-1 flex-wrap justify-center"
       >
         {headingText.split("").map((char, index) => (
           <span
