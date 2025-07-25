@@ -8,8 +8,8 @@ import Page7 from "../components/Page7";
 import Footer from "../components/Footer";
 import Reviews from "../components/Reviews";
 
-// 🔥 import your data source
-import packages from "../data/packages"; // adjust path as needed
+
+import packages from "../data/packages"; 
 
 const PackageDetails = () => {
   const { id } = useParams();
@@ -29,6 +29,7 @@ const PackageDetails = () => {
     tagline,
     formats,
     moreDetails = [],
+    reviews,
   } = pkg;
 
   return (
@@ -176,7 +177,7 @@ const PackageDetails = () => {
       {/* Other sections */}
       <PackagePlan />
       <QuestionsSection />
-      <Reviews />
+      <Reviews reviews={reviews}/>
       <Page7 />
       <Footer />
     </div>
