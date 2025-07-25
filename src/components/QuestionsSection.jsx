@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RiArrowDownWideFill } from "react-icons/ri";
 import { motion, AnimatePresence } from "framer-motion";
-import SplitText from "../hook/SplitText";
+
 import { useMemo } from "react";
 const faqData = [
   {
@@ -32,7 +32,18 @@ const faqData = [
 const QuestionsSection = () => {
   const splitHeading = useMemo(
     () => (
-      <h1 className="text-9xl md:text-[8rem] uppercase lg:text-[9rem] xl:text-[10rem] 2xl:text-[10rem] 5xl:text-[30rem] leading-none text-white text-center font-['Superset']">about the packs</h1>
+      <motion.h1
+        initial={{ y: "100%", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          ease: [0.22, 1, 0.36, 1],
+          duration: 0.7,
+          delay: 1, // slightly delayed after headings
+        }}
+        className="text-9xl md:text-[8rem] uppercase lg:text-[9rem] xl:text-[10rem] 2xl:text-[10rem] 5xl:text-[30rem] leading-none text-white text-center font-['Superset']"
+      >
+        about the packs
+      </motion.h1>
     ),
     []
   );

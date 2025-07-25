@@ -1,5 +1,5 @@
 import React from "react";
-import SplitText from "../hook/SplitText";
+
 
 import { motion } from "framer-motion";
 const Landing = () => {
@@ -34,7 +34,7 @@ const Landing = () => {
           transition={{
             ease: [0.22, 1, 0.36, 1],
             duration: 0.7,
-            delay: 1, // slightly delayed after headings
+            delay: 1, 
           }}
           className="text-[6rem] 2sm:text-[6rem] 3sm:text-[7rem] mdsm:text-[8rem] mdx:text-[8rem] xl:text-[12rem]
       leading-[7rem] 2sm:leading-[7.5rem] 3sm:leading-[9rem] mdsm:leading-[10rem] md:leading-[10rem] xl:leading-[13rem]

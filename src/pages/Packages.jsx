@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import QuestionsSection from "../components/QuestionsSection";
 import Page7 from "../components/Page7";
 import Footer from "../components/Footer";
-import SplitText from "../hook/SplitText";
+
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -68,6 +68,7 @@ const Packages = () => {
                 delay: 1.5,
               }}
               className="text-xl relative group mdsm:text-[1.5rem] py-[2px] mt-8 inline-block font-thin font-['light']  text-zinc-100 tracking-wide"
+              
             >
               LET'S GO.
               <span className="absolute bottom-0 left-0 h-[3px] w-full bg-red-400 origin-left z-0" />

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-
+import Gym from "../assets/Gym.jpg"
 gsap.registerPlugin(ScrollTrigger);
 
 const Page2 = () => {
@@ -77,7 +77,7 @@ const Page2 = () => {
       <div className="absolute top-0 right-0 w-[70vw] h-[100vh] mdsm:h-[120vh] lg:h-[130vh] xl:h-[140vh] 2xl:h-[150vh] overflow-hidden z-0">
         <img
           ref={imgRef}
-          src="https://maltapersonaltrainer.com/wp-content/uploads/2023/07/MPT-Homepage-Benefits-of-PT.jpg"
+          src={Gym}
           alt="Hero"
           className="object-cover object-left w-full h-full"
         />

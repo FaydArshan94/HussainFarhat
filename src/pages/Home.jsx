@@ -6,13 +6,10 @@ import Page2 from "../components/Page2";
 import Page3 from "../components/Page3";
 import Page4 from "../components/Page4";
 import Page5 from "../components/Page5";
-import Page6 from "../components/Page6";
 import Page7 from "../components/Page7";
 import Footer from "../components/Footer";
 import Last from "../components/Last";
-import SplitText from "../hook/SplitText";
 import Loader from "../components/Loader";
-import PackagePlan from "../components/PackagePlan";
 import Landing from "../components/Landing";
 
 const Home = () => {
@@ -39,8 +36,6 @@ const Home = () => {
   //       onComplete: () => document.body.classList.remove("no-scroll"),
   //     });
   // }, []);
-
-
 
   const AnimatedLetters = ({ text, delay = 0, colorClass = "" }) => {
     return (
@@ -84,9 +79,7 @@ const Home = () => {
       <div className="main opacity-100 transition-opacity duration-700">
         {/* Landing Section */}
 
-
         <Landing />
-        
 
         <Last />
         <Page2 />

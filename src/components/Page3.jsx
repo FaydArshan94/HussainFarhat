@@ -25,7 +25,7 @@ const Page3 = () => {
           start: "top center",
 
           end: "top top",
-          scrub: 2
+          scrub: 2,
         },
       }
     );
@@ -100,8 +100,10 @@ const Page3 = () => {
             </p>
 
             <div className="flex flex-col sm:w-fit  items-center justify-center mt-6">
-              <h1 className="text-md py-[2px] border-b-4 md:text-2xl border-white font-sans-serif font-['light'] text-white tracking-wide text-center">
+              <h1 className="text-md relative group py-[2px] md:text-2xl  font-sans-serif font-['light'] text-white tracking-wide text-center">
                 START NOW
+                <span className="absolute bottom-0 left-0 h-[3px] w-full bg-white origin-left z-0" />
+                <span className="absolute bottom-0 left-0 h-[3px] w-full bg-black origin-left z-10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
               </h1>
             </div>
           </div>

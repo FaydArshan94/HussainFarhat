@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="text-5xl mt-10 leading-tight font-['Superset'] sm:text-8xl md:mt-32 2xl:text-[10rem]">
         YOUR FITNESS <br />
         <span className="text-gray-400">JOURNEY</span>{" "}
-        <span className="text-[#890900]">IS HERE</span>
+        <span className="text-red-500">IS HERE</span>
       </div>
 
       {/* Navigation Links */}
@@ -37,9 +37,11 @@ const Footer = () => {
           <a
             key={text}
             href="#"
-            className="relative group overflow-hidden hover:after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 group-hover:after:w-full"
+            className="relative group overflow-hidden py-1 "
           >
             {text}
+            <span className="absolute bottom-0 left-0 h-[3px] w-full bg-black origin-left z-0" />
+            <span className="absolute bottom-0 left-0 h-[3px] w-full bg-white origin-left z-10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
           </a>
         ))}
       </div>
@@ -74,16 +76,23 @@ const Footer = () => {
             <IoMdMail />
           </div>
           <span className="mail relative group cursor-pointer overflow-hidden">
-            <span className="relative z-10">instagram.com/hussein.fht</span>
+            <a
+              href="https://www.instagram.com/hussein.fht?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative z-10"
+            >
+              husseinfarhat@gladiolus
+            </a>
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </span>
         </div>
       </div>
 
       {/* Bottom */}
-      <div className="text-sm italic mt-10 flex flex-col items-center text-gray-500 font-['light'] space-y-1 sm:flex-row sm:gap-10 sm:mt-16 sm:text-center sm:not-italic 2xl:text-lg 2xl:gap-16">
-        <div>Hussein Farhat</div>
-        <div>Copyright 2025</div>
+      <div className="text-sm italic mt-10 flex flex-col items-center  text-gray-500 font-['light'] space-y-1 sm:flex-row sm:gap-10 sm:mt-16 sm:text-center sm:not-italic 2xl:text-lg 2xl:gap-16">
+        <div className="">Hussein Farhat</div>
+        <div className="">Copyright 2025</div>
 
         <div className="h-5 sm:hidden w-5 mt-2 flex items-center justify-center 2xl:h-6 2xl:w-6">
           <svg
@@ -100,7 +109,7 @@ const Footer = () => {
           </svg>
         </div>
 
-        <div>All rights reserved</div>
+        <div className="">All rights reserved</div>
 
         <div className="h-5 hidden w-5 mt-2 sm:flex items-center justify-center 2xl:h-6 2xl:w-6">
           <svg
@@ -117,7 +126,7 @@ const Footer = () => {
           </svg>
         </div>
 
-        <div>Created By Fayd Arshan</div>
+        <div className=" mb-1">Created By Fayd Arshan</div>
       </div>
     </footer>
   );

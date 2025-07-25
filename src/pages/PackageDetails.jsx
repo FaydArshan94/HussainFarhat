@@ -1,10 +1,6 @@
 import React, { useRef } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-
-import SplitText from "../hook/SplitText";
 import Carousel3D from "../components/Carousel3D";
 import PackagePlan from "../components/PackagePlan";
 import QuestionsSection from "../components/QuestionsSection";

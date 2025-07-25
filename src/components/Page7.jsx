@@ -1,22 +1,11 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import ScrollVelocity from "../hook/ScrollVelocity";
-import SplitText from "../hook/SplitText";
+
 const Page7 = () => {
   const linesRef = useRef([]);
   const velocity = 50;
 
-  //   linesRef.current.forEach((el, index) => {
-  //     gsap.to(el, {
-  //       x: index % 2 === 0 ? "-25%" : "25%", // alternate directions
-  //       ease: "none",
-  //       scrollTrigger: {
-  //         trigger: el,
-  //         scrub: true,
-  //       },
-  //     });
-  //   });
-  // }, []);
   return (
     <div className="relative w-full h-screen flex items-center justify-center bg-white/30 text-white px-4 py-10 mt-20  overflow-hidden ">
       {/* Static Marquee Background */}
@@ -40,13 +29,10 @@ const Page7 = () => {
           DON'T PUT IT OFF
         </h1>
 
-        <h1 className="mt-6 w-fit mx-auto text-lg font-['light'] sm:text-xl tracking-wider font-light relative cursor-pointer group ">
-          <span className="relative z-10 text-white  transition duration-300">
-            CHOOSE YOUR PACK NOW
-          </span>
-
-          <span className="absolute left-0 -bottom-1 h-[5px] w-full bg-white group-hover:bg-[#890900] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></span>
-
+        <h1 className="mt-6 py-1 group  w-fit mx-auto text-lg font-['light'] sm:text-xl tracking-wider font-light relative cursor-pointer group ">
+          CHOOSE YOUR PACK NOW
+          <span className="absolute bottom-0 left-0 h-[3px] w-full bg-white origin-left z-0" />
+          <span className="absolute bottom-0 left-0 h-[3px] w-full bg-black origin-left z-10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
           {/* Optional background fill animation */}
         </h1>
       </div>

@@ -16,7 +16,7 @@ const generateItems = () => (
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
           style={{
-            WebkitTextStroke: "1.5px #890900",
+            WebkitTextStroke: "1.5px #F7FCFB",
             color: "transparent",
           }}
           className="inline-block font-['Superset'] text-[7.5rem] px-16 
