@@ -8,7 +8,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Page3 = () => {
-
   const containerRef = useRef(null);
   const Whatref = useRef(null);
   const WhattextRef = useRef(null);
@@ -24,12 +23,12 @@ const Page3 = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top center",
-          // markers: true, // uncomment for debugging
+
           end: "top top",
-          // markers: true, // uncomment for debugging
+          scrub: 2
         },
       }
-    )
+    );
     gsap.fromTo(
       Whatref.current,
       { y: -100 },
@@ -46,7 +45,7 @@ const Page3 = () => {
           // markers: true, // uncomment for debugging
         },
       }
-    )
+    );
     gsap.fromTo(
       WhattextRef.current,
       { y: 200, opacity: 0 },
@@ -69,10 +68,9 @@ const Page3 = () => {
 
   return (
     <div className="w-full relative    mt-40 ">
-      <div className="w-full h-[120vh] md:h-[140vh]  ">
+      <div className="w-full h-[100vh] md:h-[140vh]  ">
         <video
           ref={containerRef}
-
           className="w-full h-full object-cover skew-x-6"
           autoPlay
           loop
@@ -83,9 +81,7 @@ const Page3 = () => {
         <div className="w-full h-full bg-black/90 absolute left-0 top-0"></div>
 
         <div className="w-full px-[1rem]  absolute top-1/2 -translate-y-1/2 left-0 md:top-1/2 md:-translate-y-1/2 flex flex-col md:flex-row md:items-end md:justify-evenly lg:justify-between xl:justify-center md:gap-[3rem] 2xl:gap-[7rem] justify-center    ">
-          <div
-          ref={Whatref}
-          className="">
+          <div ref={Whatref} className="">
             <h1 className="text-[8rem] w-full 2sm:text-[9rem] md:text-[15rem] xl:text-[17rem] 2xl:text-[18rem] xl:mr-[10rem] font-['Superset'] uppercase leading-none  text-white  ">
               What
             </h1>
@@ -95,8 +91,9 @@ const Page3 = () => {
           </div>
 
           <div
-          ref={WhattextRef}
-          className=" flex xs:w-[350px]  lg:w-[40%] 2xl:w-[500px] flex-col items-start  ">
+            ref={WhattextRef}
+            className=" flex xs:w-[350px]  lg:w-[40%] 2xl:w-[500px] flex-col items-start  "
+          >
             <p className="text-lg md:text-2xl xl:text-[1.8rem] 2xl:text-[1.9rem]  text-white mt-10 leading-none  font-['light'] ">
               Custom training programs, nutrition coaching, fitness assessments,
               goal setting, progress tracking, motivation, and accountability.

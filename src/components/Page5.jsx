@@ -9,7 +9,7 @@ const Page5 = () => {
           autoPlay
           loop
           muted
-          className="bg-video  w-full h-full object-cover"
+          className="bg-video sepia-50 w-full h-full object-cover"
           src="https://maltapersonaltrainer.com/wp-content/uploads/2023/07/join-us.mp4"
         ></video>
 
@@ -23,7 +23,7 @@ const Page5 = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               className="absolute z-20 pointer-events-none clip-diagonal-top"
             >
-              <h1 className="text-white font-['Superset'] tracking-wide leading-60 text-center text-[16rem] 2sm:text-[20rem] 2sm:leading-[70vh] mdsm:text-[25rem] mdsm:leading-[80vh] md:text-[30rem] md:leading-[100vh]  xl:text-[32rem] xl:leading-[100vh] 2xl:text-[40vw]">
+              <h1 className="text-white font-['Superset'] tracking-wide leading-82 text-center text-[16rem] 2sm:text-[20rem] 2sm:leading-[70vh] mdsm:text-[25rem] mdsm:leading-[80vh] md:text-[30rem] md:leading-[100vh]  xl:text-[32rem] xl:leading-[100vh] 2xl:text-[40vw]">
                 <span className="block md:inline">JOIN</span>
                 <span className="block md:inline">&nbsp;US</span>
               </h1>
@@ -36,7 +36,7 @@ const Page5 = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               className="z-10 pointer-events-none clip-diagonal-bottom "
             >
-              <h1 className="text-white font-['Superset'] tracking-wide leading-60 text-center text-[16rem] 2sm:text-[20rem] 2sm:leading-[70vh] mdsm:text-[25rem] mdsm:leading-[80vh] md:text-[30rem] md:leading-[100vh]  xl:text-[32rem] xl:leading-[100vh] 2xl:text-[40vw]">
+              <h1 className="text-white font-['Superset'] tracking-wide leading-82 text-center text-[16rem] 2sm:text-[20rem] 2sm:leading-[70vh] mdsm:text-[25rem] mdsm:leading-[80vh] md:text-[30rem] md:leading-[100vh]  xl:text-[32rem] xl:leading-[100vh] 2xl:text-[40vw]">
                 <span className="block md:inline">JOIN</span>
                 <span className="block md:inline">&nbsp;US</span>
               </h1>

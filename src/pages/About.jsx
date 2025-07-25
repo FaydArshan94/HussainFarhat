@@ -38,66 +38,10 @@ const About = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useGSAP(() => {
-    const tl = gsap.timeline();
-
-    tl.from(bottomShapeRef.current, {
-      scaleX: 0,
-      opacity: 0,
-      duration: 0.4,
-      ease: "power2.inOut",
-      // In useGSAP
-      onComplete: () => {
-        gsap.to(bottomShapeRef.current, {
-          y: 5,
-          repeat: -1,
-          yoyo: true,
-          duration: 3,
-          ease: "sine.inOut",
-        });
-      },
-    }).from(topShapeRef.current, {
-      scaleX: 0,
-      opacity: 0,
-      duration: 0.4,
-      ease: "power2.inOut",
-      onComplete: () => {
-        gsap.to(topShapeRef.current, {
-          y: 5,
-          // x: -10,
-          repeat: -1,
-          yoyo: true,
-          duration: 3,
-          ease: "sine.inOut",
-        });
-      },
-    });
-  }, []);
-
   return (
     <>
       <div className="w-full h-full ">
         <div className="packages-landing relative overflow-hidden w-full h-screen flex items-center justify-center">
-          <div
-            ref={topShapeRef}
-            className="
-                absolute z-0 origin-left top-10  left-1/2 -translate-x-1/2
-                w-full mdsm:w-2/3  h-40  
-                bg-[red] skew-y-12 opacity-50
-              "
-            style={{ zIndex: 10 }}
-          />
-
-          <div
-            ref={bottomShapeRef}
-            className="
-                absolute z-0 origin-right  xs:top-[55%] 2sm:top-[60%] lg:top-[65%] xl:top-[69%] 2xl:top-[70%] 4xl:top-[80%] left-1/2 -translate-x-1/2
-                w-full mdsm:w-2/3  top-1/2 h-[200px] 
-                bg-[#060606] skew-y-12 opacity-50
-              "
-            style={{ zIndex: 10 }}
-          />
-
           <div className="bg-img absolute top-0 left-0 z-0 h-full w-full">
             <img
               className="w-full h-full object-cover object-top-right"
@@ -107,33 +51,9 @@ const About = () => {
           </div>
 
           <div className="content z-10 px-[1.5rem] 2sm:px-20 flex text-white flex-col items-center justify-center">
-            <SplitText
-              text="ABOUT"
-              className="text-[9rem] mdsm:text-[12rem] mdx:text-[12rem] leading-none font-['Superset'] text-center"
-              delay={100}
-              duration={0.6}
-              ease="power3.out"
-              splitType="chars"
-              from={{ opacity: 0, y: 40 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin="-100px"
-              // onLetterAnimationComplete={() => setShowFitness(true)} // ➜ show FITNESS next
-            />
+            <h1 className="text-[9rem] mdsm:text-[12rem] mdx:text-[12rem] leading-none font-['Superset'] text-center">ABOUT US</h1>
 
-            <SplitText
-              text="US"
-              className="text-[9rem] mdsm:text-[12rem] mdx:text-[12rem] leading-none font-['Superset'] text-center"
-              delay={100}
-              duration={0.6}
-              ease="power3.out"
-              splitType="chars"
-              from={{ opacity: 0, y: 40 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin="-100px"
-              onLetterAnimationComplete={handleAnimationComplete} // ➜ then show paragraph
-            />
+            
 
             <p className="text-center 2sm:text-[1.2rem] mdsm:text-[1.3rem] font-['light'] w-[70%] mt-4">
               <motion.span

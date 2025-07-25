@@ -51,6 +51,48 @@ const packages = [
         ],
       },
     ],
+    plans: [
+      {
+        name: "Starter",
+        duration: "1 Month Plan",
+        price: "$599",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+        ],
+        badge: null,
+      },
+      {
+        name: "Pro",
+        duration: "3 Month Plan",
+        price: "$1499",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+          "Priority Support",
+          "Nutrition Guidance",
+        ],
+        badge: "Most Popular",
+      },
+      {
+        name: "Elite",
+        duration: "6 Month Plan",
+        price: "$2699",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+          "Priority Support",
+          "Personalized Feedback",
+          "Exclusive Q&A Access",
+          "Nutrition Guidance",
+          "Progress Tracking",
+        ],
+        badge: "Best Value",
+      },
+    ],
     reviews: [
       {
         name: "Preeti J.",
@@ -89,7 +131,7 @@ const packages = [
     title: "Strength & Power",
     tagline: "Build muscle, get strong",
     formats: ["1-on-1"],
-    imageUrl: "/images/fat-burn.jpg",
+    imageUrl: "/images/strength-power.jpg",
     price: "₹2,999",
     description:
       "A high-intensity cardio program designed for maximum fat burn...",
@@ -135,6 +177,48 @@ const packages = [
         ],
       },
     ],
+    plans: [
+      {
+        name: "Starter",
+        duration: "1 Month Plan",
+        price: "$599",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+        ],
+        badge: null,
+      },
+      {
+        name: "Pro",
+        duration: "3 Month Plan",
+        price: "$1499",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+          "Priority Support",
+          "Nutrition Guidance",
+        ],
+        badge: "Most Popular",
+      },
+      {
+        name: "Elite",
+        duration: "6 Month Plan",
+        price: "$2699",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+          "Priority Support",
+          "Personalized Feedback",
+          "Exclusive Q&A Access",
+          "Nutrition Guidance",
+          "Progress Tracking",
+        ],
+        badge: "Best Value",
+      },
+    ],
     reviews: [
       {
         name: "Aman R.",
@@ -167,7 +251,7 @@ const packages = [
     title: "Muscle Forge",
     tagline: "Build strength, gain lean mass",
     formats: ["Gym", "Home"],
-    imageUrl: "/images/muscle-build.jpg", // Replace with your actual image path
+    imageUrl: "/images/Muscle-forge.jpg", // Replace with your actual image path
     price: "₹3,499",
     description:
       "An advanced hypertrophy-focused training program tailored to help you build muscle, gain strength.",
@@ -211,6 +295,48 @@ const packages = [
           "Personalized feedback on form & diet",
           "Access to coach via WhatsApp for support & motivation",
         ],
+      },
+    ],
+    plans: [
+      {
+        name: "Starter",
+        duration: "1 Month Plan",
+        price: "$599",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+        ],
+        badge: null,
+      },
+      {
+        name: "Pro",
+        duration: "3 Month Plan",
+        price: "$1499",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+          "Priority Support",
+          "Nutrition Guidance",
+        ],
+        badge: "Most Popular",
+      },
+      {
+        name: "Elite",
+        duration: "6 Month Plan",
+        price: "$2699",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+          "Priority Support",
+          "Personalized Feedback",
+          "Exclusive Q&A Access",
+          "Nutrition Guidance",
+          "Progress Tracking",
+        ],
+        badge: "Best Value",
       },
     ],
     reviews: [
@@ -308,6 +434,48 @@ const packages = [
         ],
       },
     ],
+    plans: [
+      {
+        name: "Starter",
+        duration: "1 Month Plan",
+        price: "$599",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+        ],
+        badge: null,
+      },
+      {
+        name: "Pro",
+        duration: "3 Month Plan",
+        price: "$1499",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+          "Priority Support",
+          "Nutrition Guidance",
+        ],
+        badge: "Most Popular",
+      },
+      {
+        name: "Elite",
+        duration: "6 Month Plan",
+        price: "$2699",
+        features: [
+          "Live Coaching Access",
+          "5 Sessions per Month",
+          "Flexible Timing",
+          "Priority Support",
+          "Personalized Feedback",
+          "Exclusive Q&A Access",
+          "Nutrition Guidance",
+          "Progress Tracking",
+        ],
+        badge: "Best Value",
+      },
+    ],
     reviews: [
       {
         name: "Sarthak Y.",
@@ -344,123 +512,4 @@ const packages = [
 
 export default packages;
 
-[
-  {
-    name: "Sarthak Y.",
-    rating: 5,
-    comment: "Peak week guidance was spot on. Nailed my conditioning!",
-  },
-  {
-    name: "Riya K.",
-    rating: 4,
-    comment:
-      "Loved the Group Grind sessions! Always felt pumped up and supported.",
-  },
-  {
-    name: "Aman R.",
-    rating: 5,
-    comment:
-      "Online coaching kept me on track even while traveling. Great experience!",
-  },
-  {
-    name: "Sneha M.",
-    rating: 5,
-    comment:
-      "The muscle gain plan helped me build lean muscle without fat. Loved it!",
-  },
-  {
-    name: "Harsh V.",
-    rating: 4,
-    comment:
-      "Loved the detailed diet breakdown in the bodybuilding prep package.",
-  },
-  {
-    name: "Nikita S.",
-    rating: 5,
-    comment:
-      "Training with the transformation package completely changed my body and mindset!",
-  },
-  {
-    name: "Rajeev T.",
-    rating: 3,
-    comment:
-      "Good support, but I needed more 1-on-1 interaction for faster progress.",
-  },
-  {
-    name: "Preeti J.",
-    rating: 5,
-    comment:
-      "Lost 6 kg in 4 weeks with the fat burn plan. It works if you stay consistent!",
-  },
-  {
-    name: "Karan P.",
-    rating: 5,
-    comment:
-      "Never thought I could get abs at 30. Thanks to the online coaching package!",
-  },
-  {
-    name: "Megha D.",
-    rating: 4,
-    comment:
-      "Loved the flexibility of the workout schedule in the transformation plan.",
-  },
-  {
-    name: "Vikrant S.",
-    rating: 5,
-    comment:
-      "Bodybuilding prep plan was on point! Nailed my first competition!",
-  },
-  {
-    name: "Alia R.",
-    rating: 5,
-    comment:
-      "Group workouts are so motivating. Trainer's energy is unbeatable!",
-  },
-  {
-    name: "Nilesh M.",
-    rating: 4,
-    comment:
-      "The app experience was smooth, and check-ins were always on time.",
-  },
-  {
-    name: "Zoya A.",
-    rating: 5,
-    comment:
-      "Transformation coaching made me stronger and more confident than ever!",
-  },
-  {
-    name: "Farhan H.",
-    rating: 4,
-    comment:
-      "Felt like an athlete again. Amazing for people returning to fitness!",
-  },
-  {
-    name: "Anjali T.",
-    rating: 5,
-    comment:
-      "The plan was simple, customized, and super effective. Lost 4 inches off my waist!",
-  },
-  {
-    name: "Yash D.",
-    rating: 5,
-    comment:
-      "Every week was intense and focused. Loved the no-nonsense training style!",
-  },
-  {
-    name: "Isha G.",
-    rating: 4,
-    comment:
-      "Had some doubts in the beginning, but the results spoke for themselves.",
-  },
-  {
-    name: "Manav B.",
-    rating: 5,
-    comment: "Competition prep was next level. Peak week strategy was gold!",
-  },
-  {
-    name: "Tanya V.",
-    rating: 5,
-    comment:
-      "Transformation package gave me structure, accountability, and results!",
-  },
-];
+

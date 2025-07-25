@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import packages from "../data/packages"; // adjust the path as needed
 
-
 // const sessionData = [
 //   {
 //     id: "pkg1",
@@ -50,74 +49,101 @@ import packages from "../data/packages"; // adjust the path as needed
 const PackageCarousel = () => {
   return (
     <div className="w-full px-4 md:px-10 2xl:px-32 py-16 bg-black">
-      <Swiper
-        modules={[Autoplay, FreeMode, Pagination]}
-        loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
-        spaceBetween={20}
-        slidesPerView={1.1}
-        breakpoints={{
-          640: { slidesPerView: 1.2 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1440: { slidesPerView: 4 },
-        }}
-        className="w-full"
-      >
-        {packages.map((pkg) => (
-          <SwiperSlide
-            key={pkg.id}
-            className="flex justify-center items-center px-4" // ensures center alignment
-            style={{ width: "300px", height: "420px" }} // optional, or use Tailwind
-          >
-            <div className="w-full h-full bg-[#121212] border border-[#F82E14] rounded-xl overflow-hidden group hover:bg-red-500 transition-all duration-300 flex flex-col">
-              <img
-                src={pkg.imageUrl}
-                alt={pkg.title}
-                className="w-full h-48 object-cover group-hover:opacity-90 transition"
-              />
-              <div className="flex-grow p-6 text-white text-center flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl md:text-2xl font-semibold font-['light'] group-hover:text-white">
+      {/* Show Swiper only for medium+ screens */}
+      <div className="hidden sm:block">
+        <Swiper
+          modules={[Autoplay, FreeMode, Pagination]}
+          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          freeMode={true}
+          pagination={{ clickable: true, dynamicBullets: true }}
+          spaceBetween={20}
+          slidesPerView={1.1}
+          breakpoints={{
+            640: { slidesPerView: 1.2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1440: { slidesPerView: 3.5 },
+          }}
+          className="w-full"
+        >
+          {packages.map((pkg) => (
+            <SwiperSlide
+              key={pkg.id}
+              className="flex justify-center items-center px-2"
+              style={{ width: "100%", height: "520px" }}
+            >
+              <div className="relative w-full h-full overflow-hidden group shadow-lg hover:scale-[1.02] transition-transform duration-300">
+                <img
+                  src={pkg.imageUrl}
+                  alt={pkg.title}
+                  className="w-full h-full object-cover select-none brightness-75 group-hover:brightness-100 transition-all duration-500"
+                />
+                {/* Overlay content */}
+                <div className="absolute inset-0 bg-black/40 flex flex-col justify-center select-none items-center px-6 text-center text-white">
+                  <h3 className="text-2xl md:text-3xl xl:text-5xl font-['Superset'] drop-shadow-lg">
                     {pkg.title}
                   </h3>
-                  <p className="mt-2 text-sm md:text-base text-gray-300 group-hover:text-white font-['light']">
+                  <p className="mt-2 text-sm md:text-base text-gray-200 max-w-xs drop-shadow-md">
                     {pkg.tagline}
                   </p>
+                  <Link to={`/package/${pkg.id}`} state={pkg}>
+                    <button className="mt-6 px-6 py-2 bg-white text-black font-semibold rounded-full hover:bg-[#F82E14] hover:text-white transition-all shadow-md">
+                      View Details
+                    </button>
+                  </Link>
                 </div>
-                <Link to={`/package/${pkg.id}`} state={pkg}>
-                  {" "}
-                  <button className="mt-4 px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-black hover:text-white transition-all">
-                    View Details
-                  </button>
-                </Link>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
-      {/* Pagination style override (optional for center alignment) */}
       <style>{`
-        .swiper-pagination {
-          text-align: center;
-          margin-top: 20px;
-        }
-        .swiper-pagination-bullet {
-          background: #f82e14;
-          opacity: 0.6;
-        }
-        .swiper-pagination-bullet-active {
-          background: #f82e14;
-          opacity: 1;
-          transform: scale(1.2);
-        }
-      `}</style>
+  .swiper-pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .swiper-pagination-bullet {
+    background: #fff; /* ✅ Default dot color */
+    opacity: 0.4;
+    transition: all 0.3s ease;
+  }
+  .swiper-pagination-bullet-active {
+    background: #F82E14; /* ✅ Active dot color */
+    opacity: 1;
+    transform: scale(1.2);
+  }
+`}</style>
+
+      {/* Mobile fallback: No Swiper */}
+      <div className="block sm:hidden space-y-10">
+        {packages.map((pkg) => (
+          <div
+            key={pkg.id}
+            className="relative w-full h-[480px]  overflow-hidden group shadow-lg"
+          >
+            <img
+              src={pkg.imageUrl}
+              alt={pkg.title}
+              className="w-full h-full object-cover brightness-75 group-hover:brightness-100 transition-all duration-500"
+            />
+            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center px-4 text-center text-white">
+              <h3 className="text-2xl font-bold font-['Superset'] drop-shadow-md">
+                {pkg.title}
+              </h3>
+              <p className="mt-2 text-sm text-gray-200 max-w-xs">
+                {pkg.tagline}
+              </p>
+              <Link to={`/package/${pkg.id}`} state={pkg}>
+                <button className="mt-6 px-5 py-2 bg-white text-black font-semibold rounded-full hover:bg-[#F82E14] hover:text-white transition-all shadow-md">
+                  View Details
+                </button>
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

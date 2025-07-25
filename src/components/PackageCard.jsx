@@ -20,7 +20,7 @@ const PackageCard = ({ title, video, details }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Video Background */}
+      
       <img
         className="absolute inset-0 w-full h-full object-cover"
         src={large}
@@ -33,7 +33,7 @@ const PackageCard = ({ title, video, details }) => {
       {/* Overlay Layer */}
       <div
         className={`absolute inset-0 z-10 flex flex-col justify-end items-center px-6 pb-10 pt-6 transition-all duration-300 ${
-          isHovered ? "bg-black/60" : "bg-black/80"
+          isHovered ? "bg-black/20" : "bg-black/40"
         }`}
       >
         <h3 className="text-[2rem] sm:text-4xl  xl:text-[3rem] uppercase font-['Superset'] text-center mb-10  text-white">
@@ -71,7 +71,7 @@ const PackageCard = ({ title, video, details }) => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-white"
               >
-                Package Details
+                {title}
               </motion.h3>
 
               <ul className="space-y-6">

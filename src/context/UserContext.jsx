@@ -1,26 +1,34 @@
-    // /context/UserContext.jsx
-import { createContext, useState, useEffect, useContext } from "react";
+// src/context/UserContext.jsx
+import { createContext, useContext, useState, useEffect } from "react";
 
-export const UserContext = createContext();
+const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState(() => {
-    const saved = localStorage.getItem("loggedInUser");
-    return saved ? JSON.parse(saved) : null;
-  });
+  const [currentUser, setCurrentUser] = useState(null);
 
-  const login = (userData) => {
-    setUser(userData);
-    localStorage.setItem("loggedInUser", JSON.stringify(userData));
+  useEffect(() => {
+    const userFromStorage = localStorage.getItem("loggedInUser");
+    if (userFromStorage) {
+      setCurrentUser(JSON.parse(userFromStorage));
+    }
+  }, []);
+
+  const login = (user) => {
+    const fullUser = { ...user, plans: user.plans || [] }; // 🆕 Add default plans if not
+    setCurrentUser(fullUser);
+    localStorage.setItem("loggedInUser", JSON.stringify(fullUser));
   };
-
   const logout = () => {
-    setUser(null);
+    setCurrentUser(null);
     localStorage.removeItem("loggedInUser");
+  };
+  const refreshUser = () => {
+    const updated = JSON.parse(localStorage.getItem("loggedInUser"));
+    setCurrentUser(updated);
   };
 
   return (
-    <UserContext.Provider value={{ user, login, logout }}>
+    <UserContext.Provider value={{ currentUser, login, logout,refreshUser  }}>
       {children}
     </UserContext.Provider>
   );

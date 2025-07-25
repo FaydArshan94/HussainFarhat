@@ -1,22 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+
 const items = ["FAT LOSS", "MUSCLE BUILDING", "HEALTHY LIFESTYLE"];
 
 const generateItems = () => (
   <>
     {items.map((item, idx) => (
       <React.Fragment key={idx}>
-        <h1
+        <motion.h1
+          whileHover={{
+            color: "#890900", // Fill color on hover
+            scale: 1.05, // Slight zoom
+            textShadow: "0px 0px 15px #890900", // Optional glow
+          }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
           style={{
             WebkitTextStroke: "1.5px #890900",
             color: "transparent",
           }}
-          className="inline-block font-['Superset'] text-[7.5rem] px-16  sm:text-[8rem] md:text-[9rem] lg:text-[10rem] xl:text-[11rem] 2xl:text-[11rem] "
+          className="inline-block font-['Superset'] text-[7.5rem] px-16 
+            sm:text-[8rem] md:text-[9rem] lg:text-[10rem] xl:text-[11rem] 2xl:text-[11rem]"
         >
           {item}
-        </h1>
-        <span className="inline-block  max-sm:text-[3rem] italic font-bold sm:text-[4.5rem] md:text-[4rem]">
+        </motion.h1>
+
+        <span className="inline-block max-sm:text-[3rem] italic font-bold sm:text-[4.5rem] md:text-[4rem]">
           /
         </span>
       </React.Fragment>

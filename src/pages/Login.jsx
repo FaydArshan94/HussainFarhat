@@ -1,7 +1,7 @@
 // src/pages/Login.jsx
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
 
 const Login = () => {
@@ -18,7 +18,7 @@ const Login = () => {
 
   if (matchedUser) {
     login(matchedUser); // set in context
-    navigate("/");
+    navigate("-1");
   } else {
     alert("Invalid email or password");
   }
@@ -60,6 +60,10 @@ const Login = () => {
           >
             Login
           </button>
+
+          <Link to="/register">
+            <h1>Don't Have an account</h1>
+          </Link>
         </form>
       </div>
     </div>

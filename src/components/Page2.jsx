@@ -93,7 +93,7 @@ const Page2 = () => {
           {["EXPERIENCE","THE BENEFITS", "OF PERSONAL", "TRAINING"].map((line, i) => (
             <h1
               key={i}
-              className="text-[5rem] leading-none tracking-wide 2sm:text-[6rem] md:text-[7rem] lg:text-[7.5rem] xl:text-[7.5rem] 2xl:text-[9rem] 3xl:text-[14rem] text-left overflow-hidden"
+              className="text-[5rem] leading-[6rem] tracking-wide 2sm:text-[6rem] md:text-[7rem] lg:text-[7.5rem] xl:text-[7.5rem] xl:leading-[8.5rem] 2xl:text-[9rem] 3xl:text-[14rem] text-left overflow-hidden"
             >
               {line.split(" ").map((word, index) => (
                 <span

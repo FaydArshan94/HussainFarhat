@@ -37,9 +37,9 @@ const reviews = [
 
 const Review = () => {
   return (
-    <div className="w-full h-screen px-4 py-10   bg-[#0e0e0e] text-white">
+    <div className="w-full h-screen xl:h-[80vh] px-4 py-20  text-white">
       <div className="text-center mb-8">
-        <h2 className="text-[4rem] md:text-4xl leading-none uppercase font-['Superset']">What Our Customers Say</h2>
+        <h2 className="text-[4rem] md:text-9xl  leading-none uppercase font-['Superset']">What Our Customers Say</h2>
         <p className="text-gray-400 mt-4">Based on 8,351 reviews</p>
       </div>
 

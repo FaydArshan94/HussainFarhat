@@ -29,28 +29,13 @@ const faqData = [
   },
 ];
 
-
-
 const QuestionsSection = () => {
-
-
-const splitHeading = useMemo(
-  () => (
-    <SplitText
-      text="ABOUT THE PACKS"
-      className="text-9xl md:text-[8rem] lg:text-[9rem] xl:text-[10rem] 2xl:text-[10rem] 5xl:text-[30rem] leading-none text-white text-center font-['Superset']"
-      delay={100}
-      duration={0.6}
-      ease="power3.out"
-      splitType="chars"
-      from={{ opacity: 0, y: 40 }}
-      to={{ opacity: 1, y: 0 }}
-      threshold={0.1}
-      rootMargin="-100px"
-    />
-  ),
-  []
-);
+  const splitHeading = useMemo(
+    () => (
+      <h1 className="text-9xl md:text-[8rem] uppercase lg:text-[9rem] xl:text-[10rem] 2xl:text-[10rem] 5xl:text-[30rem] leading-none text-white text-center font-['Superset']">about the packs</h1>
+    ),
+    []
+  );
 
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -59,7 +44,7 @@ const splitHeading = useMemo(
   };
 
   return (
-    <div className="questions py-20 xl:py-40 min-h-screen w-full text-center bg-black px-4 md:px-10">
+    <div className="questions py-20 xl:py-10 min-h-screen w-full text-center bg-black px-4 md:px-10">
       <div className="">{splitHeading}</div>
 
       <div className="w-[90%] sm:w-[85%] md:w-[80%] lg:max-w-8xl   mx-auto mt-10 space-y-6 xl:space-y-10 lg:mt-20">

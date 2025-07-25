@@ -30,25 +30,15 @@ const Page7 = () => {
             "DON'T PUT IT OFF",
           ]}
           velocity={velocity}
-          className="custom-scroll-text text-[10rem] leading-[30vh] xl:text-[12rem] md:text-[15rem] font-light  md:leading-[45vh] xl:leading-[40vh] font-['Superset'] tracking-wider"
+          className="custom-scroll-text text-[10rem] leading-[25vh] xl:text-[12rem] md:text-[15rem] font-light  md:leading-[45vh] xl:leading-[13rem] font-['Superset'] tracking-wider"
         />
       </div>
 
       {/* Foreground Content with Animation */}
       <div className="z-10 max-w-2xl px-10 flex flex-col  items-center justify-center text-center overflow-hidden w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:max-w-4xl">
-        <SplitText
-          text="DON'T PUT IT OFF"
-          className="text-[6rem] 2sm:text-[8rem] leading-[1] font-['Superset'] origin-left w-full  md:text-[10rem] lg:text-[10rem] xl:text-[12rem] break-words"
-          delay={100}
-          duration={0.6}
-          ease="power3.out"
-          splitType="chars"
-          from={{ opacity: 0, y: 40 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-          rootMargin="-100px"
-          // onLetterAnimationComplete={() => setShowFitness(true)} // ➜ show FITNESS next
-        />
+        <h1 className="text-[7.5rem] 2sm:text-[8rem] leading-[8rem] font-['Superset'] origin-left w-full  md:text-[10rem] md:leading-[12rem] lg:text-[10rem  xl:text-[12rem] xl:leading-[14rem] break-words">
+          DON'T PUT IT OFF
+        </h1>
 
         <h1 className="mt-6 w-fit mx-auto text-lg font-['light'] sm:text-xl tracking-wider font-light relative cursor-pointer group ">
           <span className="relative z-10 text-white  transition duration-300">

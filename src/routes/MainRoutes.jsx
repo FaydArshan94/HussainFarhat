@@ -9,6 +9,7 @@ import Contact from "../pages/Contact";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import PackageDetails from "../pages/PackageDetails";
+import Profile from "../pages/Profile";
 
 const MainRoutes = () => {
   return (
@@ -21,6 +22,9 @@ const MainRoutes = () => {
       <Route path="/book" element={<Book />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/register/:plan" element={<Register />} />
+      <Route path="/profile" element={<Profile />} />
+
       <Route path="/login" element={<Login />} />
     </Routes>
   );

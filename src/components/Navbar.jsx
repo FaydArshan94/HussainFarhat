@@ -6,19 +6,15 @@ import { useUser } from "../context/UserContext"; // 👈 Import the hook
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { user, logout } = useUser(); // 👈 useUser hook
+  const { currentUser, logout } = useUser(); // 👈 useUser hook
+  console.log(currentUser);
 
   const navigationLinks = [
     { name: "Home", to: "/" },
     { name: "About", to: "/about" },
-    { name: "Personal Training", to: "/personal-training" },
     { name: "Packages", to: "/packages" },
-    { name: "Book", to: "/book" },
     { name: "Contact", to: "/contact" },
-    ...(!user ? [
-    { name: "Login", to: "/login" },
-    { name: "Register", to: "/register" }
-  ] : []),
+    ...(!currentUser ? [{ name: "Login", to: "/login" }] : []),
   ];
 
   return (
@@ -78,7 +74,7 @@ const Navbar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 pr-5 h-full w-full md:w-1/3 bg-[url(https://www.primalstrength.com/cdn/shop/files/gymdesign_render_Two_collumn_grid_cb1b5850-fa8e-4a7b-a2b3-190c2e45facd.jpg?v=1680719688&width=1500)] bg-cover bg-center shadow-2xl z-80 transform transition-all duration-700 ease-out ${
+        className={`fixed top-0  right-0 pr-5 h-full w-full md:w-1/3 bg-[url(https://www.primalstrength.com/cdn/shop/files/gymdesign_render_Two_collumn_grid_cb1b5850-fa8e-4a7b-a2b3-190c2e45facd.jpg?v=1680719688&width=1500)] bg-cover bg-center shadow-2xl z-80 transform transition-all duration-700 ease-out ${
           isOpen
             ? "translate-x-0 scale-100 opacity-100 rotate-0"
             : "translate-x-full scale-75 opacity-0 rotate-12"
@@ -155,18 +151,31 @@ const Navbar = () => {
                 </NavLink>
               );
             })}
+
+            {/* ✅ User info OUTSIDE the .map() */}
+            {currentUser && (
+              <>
+                <NavLink
+                  to="/profile"
+                  className={`flex items-center  ${
+                    isOpen
+                      ? "translate-x-0 opacity-100"
+                      : "translate-x-8 opacity-0"
+                  }`}
+                  style={{
+                    transitionDelay: isOpen
+                      ? `${navigationLinks.length * 100 + 200}ms`
+                      : "0ms",
+                  }}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <h1 className="font-medium uppercase hover:text-[#3D4DBB] transition-colors leading-tight text-5xl text-white font-['Superset']">
+                    Profile
+                  </h1>
+                </NavLink>
+              </>
+            )}
           </div>
-          {user && (
-            <div className="mt-6 text-right">
-              <p className="text-white text-lg mb-2">Hi, {user.name} 👋</p>
-              <button
-                onClick={() => logout()}
-                className="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition"
-              >
-                Logout
-              </button>
-            </div>
-          )}
         </div>
       </div>
     </>
