@@ -26,7 +26,7 @@ const generateItems = () => (
 
 const Last = () => {
   return (
-    <div className="overflow-x-hidden  pt-10 bg-black  whitespace-nowrap w-full md:pt-28 ">
+    <div className="overflow-x-hidden  py-10 bg-black  whitespace-nowrap w-full md:py-28 ">
       <motion.div
         animate={{ x: ["0%", "-50%"] }} // Move only half (content is doubled)
         transition={{

@@ -84,7 +84,7 @@ const Page2 = () => {
       </div>
 
       {/* Content Block */}
-      <div className="relative mt-[30rem] z-10 flex flex-col mdsm:flex-row mdsm:justify-between mdsm:gap-5 w-full mdsm:mt-[40rem]">
+      <div className="relative mt-[20rem]  z-10 flex flex-col mdsm:flex-row mdsm:justify-between mdsm:gap-5 w-full mdsm:mt-[20rem] md:mt-[30rem]">
         {/* Heading lines */}
         <div
           ref={headingContainerRef}
@@ -110,7 +110,7 @@ const Page2 = () => {
         {/* Paragraphs */}
         <div
           ref={paragraphContainerRef}
-          className="mt-12 2sm:w-[70%] mdsm:w-fit md:w-[90%] rounded-lg mdsm:mt-40 md:mt-60 xl:mt-80 lg:translate-y-20 font-['FrankitonSansL'] font-thin w-full flex flex-col items-start xl:items-center"
+          className="mt-12 2sm:w-[70%] mdsm:w-fit md:w-[90%] rounded-lg mdsm:mt-60 md:mt-80 lg:translate-y-20 font-['FrankitonSansL'] font-thin w-full flex flex-col items-start xl:items-center"
         >
           {[
             "We build personalized plans for your fat loss, muscle gain, or overall health. No fluff — just real, effective training and nutrition that fits your life.",

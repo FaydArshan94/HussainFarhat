@@ -32,7 +32,7 @@ const Page3 = () => {
     )
     gsap.fromTo(
       Whatref.current,
-      { y: -200 },
+      { y: -100 },
       {
         y: 0,
         ease: "power3.out",
@@ -68,8 +68,8 @@ const Page3 = () => {
   }, []);
 
   return (
-    <div className="w-full relative h-screen  xl:h-[120vh] mt-40 ">
-      <div className="w-full h-screen xl:h-full ">
+    <div className="w-full relative    mt-40 ">
+      <div className="w-full h-[120vh] md:h-[140vh]  ">
         <video
           ref={containerRef}
 
@@ -86,10 +86,10 @@ const Page3 = () => {
           <div
           ref={Whatref}
           className="">
-            <h1 className="text-[11rem] w-full 2sm:text-[12rem] md:text-[15rem] xl:text-[17rem] 2xl:text-[18rem] xl:mr-[10rem] font-['Superset'] uppercase leading-none  text-white  ">
+            <h1 className="text-[8rem] w-full 2sm:text-[9rem] md:text-[15rem] xl:text-[17rem] 2xl:text-[18rem] xl:mr-[10rem] font-['Superset'] uppercase leading-none  text-white  ">
               What
             </h1>
-            <h1 className="text-[11rem]  2sm:text-[12rem] md:text-[15rem] xl:text-[17rem] 2xl:text-[18rem]  font-['Superset'] uppercase leading-none  text-white  ">
+            <h1 className="text-[8rem]  2sm:text-[9rem] md:text-[15rem] xl:text-[17rem] 2xl:text-[18rem]  font-['Superset'] uppercase leading-none  text-white  ">
               WE do
             </h1>
           </div>
@@ -97,13 +97,13 @@ const Page3 = () => {
           <div
           ref={WhattextRef}
           className=" flex xs:w-[350px]  lg:w-[40%] 2xl:w-[500px] flex-col items-start  ">
-            <p className="text-xl md:text-2xl xl:text-[1.8rem] 2xl:text-[1.9rem] xl:leading-[4vh] 2xl:leading-[4.5vh] text-white mt-10 leading-[3vh] md:leading-[4vh] font-['light'] ">
+            <p className="text-lg md:text-2xl xl:text-[1.8rem] 2xl:text-[1.9rem]  text-white mt-10 leading-none  font-['light'] ">
               Custom training programs, nutrition coaching, fitness assessments,
               goal setting, progress tracking, motivation, and accountability.
             </p>
 
-            <div className="flex flex-col sm:w-fit  items-center justify-center mt-8">
-              <h1 className="text-xl py-[2px] border-b-4 md:text-2xl border-white font-sans-serif font-['light'] text-white tracking-wide text-center">
+            <div className="flex flex-col sm:w-fit  items-center justify-center mt-6">
+              <h1 className="text-md py-[2px] border-b-4 md:text-2xl border-white font-sans-serif font-['light'] text-white tracking-wide text-center">
                 START NOW
               </h1>
             </div>

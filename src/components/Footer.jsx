@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
 
       {/* Tagline */}
-      <div className="text-5xl mt-10 leading-tight font-['Superset'] sm:text-8xl md:mt-40 2xl:text-[10rem]">
+      <div className="text-5xl mt-10 leading-tight font-['Superset'] sm:text-8xl md:mt-32 2xl:text-[10rem]">
         YOUR FITNESS <br />
         <span className="text-gray-400">JOURNEY</span>{" "}
         <span className="text-[#890900]">IS HERE</span>

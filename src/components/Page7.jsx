@@ -18,7 +18,7 @@ const Page7 = () => {
   //   });
   // }, []);
   return (
-    <div className="relative w-full h-[50vh] flex items-center justify-center bg-white/30 text-white px-4 py-10 overflow-hidden sm:h-[70vh]">
+    <div className="relative w-full h-screen flex items-center justify-center bg-white/30 text-white px-4 py-10 mt-20  overflow-hidden ">
       {/* Static Marquee Background */}
       <div className="absolute left-1/2 top-1/2 text-9xl -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 flex flex-col gap-4 opacity-[0.05] pointer-events-none">
         <ScrollVelocity
@@ -30,7 +30,7 @@ const Page7 = () => {
             "DON'T PUT IT OFF",
           ]}
           velocity={velocity}
-          className="custom-scroll-text text-[10rem] xl:text-[12rem] md:text-[15rem] font-light leading-[18vh]  md:leading-[27vh] font-['Superset'] tracking-wider"
+          className="custom-scroll-text text-[10rem] leading-[30vh] xl:text-[12rem] md:text-[15rem] font-light  md:leading-[45vh] xl:leading-[40vh] font-['Superset'] tracking-wider"
         />
       </div>
 
@@ -38,7 +38,7 @@ const Page7 = () => {
       <div className="z-10 max-w-2xl px-10 flex flex-col  items-center justify-center text-center overflow-hidden w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:max-w-4xl">
         <SplitText
           text="DON'T PUT IT OFF"
-          className="text-[6rem] 2sm:text-[8rem] leading-[1] font-['Superset'] origin-left w-full  md:text-[8rem] lg:text-[10rem] xl:text-[12rem] break-words"
+          className="text-[6rem] 2sm:text-[8rem] leading-[1] font-['Superset'] origin-left w-full  md:text-[10rem] lg:text-[10rem] xl:text-[12rem] break-words"
           delay={100}
           duration={0.6}
           ease="power3.out"

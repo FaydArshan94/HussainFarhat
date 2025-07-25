@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
-
 import Page2 from "../components/Page2";
 import Page3 from "../components/Page3";
 import Page4 from "../components/Page4";
@@ -11,126 +10,73 @@ import Page6 from "../components/Page6";
 import Page7 from "../components/Page7";
 import Footer from "../components/Footer";
 import Last from "../components/Last";
+import SplitText from "../hook/SplitText";
+import Loader from "../components/Loader"
+import PackagePlan from "../components/PackagePlan"
 
-import fht from "../assets/fht.jpg";
-import Loader from "../components/Loader";
-import MaskedImage from "../components/MaskedImage";
 
 const Home = () => {
-  const [showMainContent, setShowMainContent] = useState(false);
-  const [startImage, setStartImage] = useState(false);
-  const [startHeadings, setStartHeadings] = useState(false);
-  const landingRef = useRef(null);
+  const [showMainContent, setShowMainContent] = useState(
+    sessionStorage.getItem("hasSeenLoader") === "true"
+  );
 
   const topShapeRef = useRef(null);
   const bottomShapeRef = useRef(null);
-  const backCursor = useRef(null);
 
-  useEffect(() => {
-    // On mount: block scroll
-    document.body.classList.add("no-scroll");
 
-    return () => {
-      // On unmount: just in case cleanup
-      document.body.classList.remove("no-scroll");
-    };
-  }, []);
+
+  // useGSAP(() => {
+  //   const tl = gsap.timeline();
+
+  //   tl.to(".eye", { opacity: 1, duration: 1, ease: "power2.inOut" })
+  //     .add(() => {
+  //       setShowMainContent(true);
+  //       sessionStorage.setItem("hasSeenLoader", "true");
+  //     })
+  //     .to(".main", { opacity: 1, duration: 1, ease: "power2.inOut" }, "<")
+  //     .to(".svg", {
+  //       y: "-100%",
+  //       duration: 1.2,
+  //       ease: "power3.inOut",
+  //       onComplete: () => document.body.classList.remove("no-scroll"),
+  //     });
+  // }, []);
 
   useGSAP(() => {
     const tl = gsap.timeline();
 
-    tl.to(".eye", { opacity: 1, duration: 1, ease: "power2.inOut" })
-      .add(() => setShowMainContent(true))
-      .to(".main", { opacity: 1, duration: 1, ease: "power2.inOut" }, "<")
-      .to(".svg", {
-        y: "-100%",
-        duration: 1.2,
-        ease: "power3.inOut",
-        onComplete: () => document.body.classList.remove("no-scroll"),
-      })
-      // 1. Animate shape
-
-      .to(bottomShapeRef.current, {
-        scaleX: 42,
-        opacity: 0.8,
-        duration: 0.4,
-        ease: "power2.inOut",
-        onComplete: () => {
-          // Start cloudy floating effect after reveal
-          gsap.to(bottomShapeRef.current, {
-            y: 20,
-            x: -10,
-            repeat: -1,
-            yoyo: true,
-            duration: 3,
-            ease: "sine.inOut",
-          });
-        },
-      })
-
-      .to(topShapeRef.current, {
-        scaleX: 25,
-        opacity: 0.8,
-        duration: 0.4,
-        ease: "power2.inOut",
-        onComplete: () => {
-          setStartImage(true);
-
-          // Start cloudy floating effect after reveal
-          gsap.to(topShapeRef.current, {
-            y: 20,
-            x: -10,
-            repeat: -1,
-            yoyo: true,
-            duration: 3,
-            ease: "sine.inOut",
-          });
-        },
-      });
-
-    // Inside your gsap timeline, after shape animation is done:
+    tl.from(bottomShapeRef.current, {
+      scaleX: 0,
+      opacity: 0,
+      duration: 0.4,
+      ease: "power2.inOut",
+      // In useGSAP
+      onComplete: () => {
+        gsap.to(bottomShapeRef.current, {
+          y: 5,
+          repeat: -1,
+          yoyo: true,
+          duration: 3,
+          ease: "sine.inOut",
+        });
+      },
+    }).from(topShapeRef.current, {
+      scaleX: 0,
+      opacity: 0,
+      duration: 0.4,
+      ease: "power2.inOut",
+      onComplete: () => {
+        gsap.to(topShapeRef.current, {
+          y: 5,
+          // x: -10,
+          repeat: -1,
+          yoyo: true,
+          duration: 3,
+          ease: "sine.inOut",
+        });
+      },
+    });
   }, []);
-
-  useEffect(() => {
-    if (!showMainContent || !topShapeRef.current) return;
-
-    const handleMouseMove = (e) => {
-      const x = e.clientX;
-      const y = e.clientY;
-
-      // Shape moves only slightly left/right
-      const xMove = (x / window.innerWidth - 0.1) * 10;
-
-      gsap.to(topShapeRef.current, {
-        x: xMove,
-        duration: 0.5,
-        ease: "power2.out",
-      });
-      gsap.to(bottomShapeRef.current, {
-        x: xMove,
-        duration: 0.5,
-        ease: "power2.out",
-      });
-
-      // Cursor follows the real mouse position
-      gsap.to(backCursor.current, {
-        y: y,
-        x: x,
-        duration: 0.4,
-        ease: "power2.out",
-      });
-    };
-
-    document
-      .querySelector(".main")
-      ?.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      document
-        .querySelector(".main")
-        ?.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [showMainContent]);
 
   const AnimatedLetters = ({ text, delay = 0, colorClass = "" }) => {
     return (
@@ -139,7 +85,7 @@ const Home = () => {
           <motion.span
             key={i}
             initial={{ y: "100%", opacity: 0 }}
-            animate={startHeadings ? { y: 0, opacity: 1 } : {}}
+            // animate={startHeadings ? { y: 0, opacity: 1 } : {}}
             transition={{
               ease: [0.22, 1, 0.36, 1],
               duration: 0.6,
@@ -157,101 +103,109 @@ const Home = () => {
   };
 
   return (
-    <div className="w-full bg-black overflow-hidden relative">
-      {/* Loader Overlay */}
-      <Loader />
+    <div className="w-full bg-black/10 overflow-hidden relative">
+      {!showMainContent && (
+        <Loader
+          onComplete={() => {
+            setShowMainContent(true);
+            gsap.to(".main", {
+              opacity: 1,
+              duration: 1,
+              ease: "power2.inOut",
+            });
+          }}
+        />
+      )}
 
-      <div className="main opacity-0 transition-opacity duration-700">
+      <div className="main opacity-100 transition-opacity duration-700">
         {/* Landing Section */}
-        <div
-          ref={landingRef}
-          className="landing relative px-[2rem]  flex items-center justify-center h-[150vh] sm:h-[120vh] md:h-[100vh] lg:h-screen xl:h-[130vh] 2xl:h-[120vh] w-full overflow-hidden bg-[url(https://www.primalstrength.com/cdn/shop/files/gym_design_Headers.jpg?v=1680779429&width=2000)] bg-cover bg-no-repeat bg-center"
-        >
-          <div ref={backCursor} className="backCursor"></div>
-          {/* Shapes */}
-          <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-            <div
-              ref={bottomShapeRef}
-              className="
-                absolute right-0 md:right-40 origin-right md:-bottom-10 
-                w-full md:w-[2%]  max-w-[900px] h-[250px] md:h-[250px]
-                bg-[#060606] skew-y-12 opacity-0
-              "
-              style={{ zIndex: 10 }}
-            />
 
-            <div
-              ref={topShapeRef}
-              className="
-                absolute hidden md:flex  md:left-20 origin-left md:top-20 
-                w-full md:w-[2%]  max-w-[400px]  md:h-[200px]
-                bg-red-400 skew-y-12 opacity-0
+        <div className="packages-landing relative overflow-hidden w-full h-screen flex items-center justify-center">
+          <div
+            ref={topShapeRef}
+            className="
+                absolute z-0 origin-left top-10  left-1/2 -translate-x-1/2
+                w-full mdsm:w-2/3  h-40  
+                bg-[red] skew-y-12 opacity-50
               "
-              style={{ zIndex: 10 }}
+            style={{ zIndex: 10 }}
+          />
+
+          <div
+            ref={bottomShapeRef}
+            className="
+                absolute z-0 origin-right  xs:top-[55%] 2sm:top-[60%] lg:top-[65%] xl:top-[69%] 2xl:top-[70%] 4xl:top-[80%] left-1/2 -translate-x-1/2
+                w-full mdsm:w-2/3  top-1/2 h-[200px] 
+                bg-[#060606] skew-y-12 opacity-50
+              "
+            style={{ zIndex: 10 }}
+          />
+
+          <div className="bg-img absolute top-0 left-0 z-0 h-full w-full">
+            <img
+              className="w-full h-full object-cover object-top-right"
+              src="https://www.primalstrength.com/cdn/shop/files/gym_design_Headers.jpg?v=1680779429&width=2000"
+              alt=""
             />
           </div>
 
-          {/* Inner Content */}
-          <div className="inner   z-40 h-full md:h-full xl:h-[80%] relative w-full flex flex-col items-center mdx:flex-row md:justify-center mdx:items-center md:px-20 mdx:gap-10 xl:gap-0 sm:w-full">
-            <MaskedImage
-              animateNow={startImage}
-              onReveal={() => setStartHeadings(true)}
+          <div className="content z-10 px-[1.5rem] 2sm:px-20 flex text-white flex-col items-center justify-center">
+            <SplitText
+              text="GLADIOLOUS"
+              className="text-[5rem] 2sm:text-[6rem] mdsm:text-[8rem] mdx:text-[8rem] xl:text-[10rem] leading-none font-['Superset'] text-center"
+              delay={100}
+              duration={0.6}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              // onLetterAnimationComplete={() => setShowFitness(true)} // ➜ show FITNESS next
             />
 
-            <div className="z-10 md:md-1/2  flex flex-col h-full  md:h-fit items-center xl:h-full -translate-y-10 mdx:translate-y-0 mdx:items-start mdx:justify-start px-10">
-              <div className="text-center  py-1 w-full  mdx:text-left mdx:w-full  ">
-                <h1 className="text-[clamp(3rem,15vw,7rem)]   flex flex-col  w-full  overflow-hidden md:text-[7rem]   lg:text-[7rem] xl:text-[9.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-[14vh] 2sm:leading-none font-['Superset'] text-white tracking-wide">
-                  <AnimatedLetters text="THE" delay={0} />
-                  <AnimatedLetters text="GLADIOLUS" delay={0.3} />
-                </h1>
+            <SplitText
+              text="COACHING"
+              className="text-[5rem] 2sm:text-[6rem]  mdsm:text-[8rem] mdx:text-[8rem] xl:text-[10rem] leading-none font-['Superset'] text-center"
+              delay={100}
+              duration={0.6}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              // onLetterAnimationComplete={handleAnimationComplete} // ➜ then show paragraph
+            />
 
-                <h1 className="text-[clamp(3rem,15vw,7rem)]   mdx:text-[7rem] overflow-hidden lg:text-[7rem] xl:text-[9.5rem] 2xl:text-[11rem] 2xl:leading-[12rem] leading-[14vh] 2sm:leading-none font-['Superset'] text-[#F82E14] tracking-wide">
-                  <AnimatedLetters
-                    text="COACHING"
-                    delay={0.4}
-                    colorClass="text-[#F82E14]"
-                  />
-                </h1>
-              </div>
+            <p className="text-center text-[0.8rem] 2sm:text-[1rem] mdsm:text-[1.3rem] font-['light'] w-[70%] mt-4">
+              <motion.span
+                initial={{ y: "100%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  ease: [0.22, 1, 0.36, 1],
+                  duration: 0.7,
+                  delay: 1, // slightly delayed after headings
+                }}
+                className="origin-left inline-block "
+              >
+                Choose your perfect fitness plan and start transforming your
+                body and mind today.
+              </motion.span>
+            </p>
 
-              <p className="text-white text-md mdx:text-[1.5rem] xl:text-[1.5rem] xl:mt-16  overflow-hidden xl:w-[25rem] mt-2 leading-snug text-center mdx:text-left font-['FrankitonSansL']">
-                <motion.span
-                  initial={{ y: "100%", opacity: 0 }}
-                  animate={
-                    startHeadings
-                      ? { y: 0, opacity: 1 }
-                      : { y: "100%", opacity: 0 }
-                  }
-                  transition={{
-                    ease: [0.22, 1, 0.36, 1],
-                    duration: 0.7,
-                    delay: 0.3, // slightly delayed after headings
-                  }}
-                  className="origin-left inline-block "
-                >
-                  Dream body. No cardio. No diets. Guaranteed results.
-                </motion.span>
-              </p>
-
-              <div className="flex items-center overflow-hidden justify-center mt-10 mdx:justify-start">
-                <motion.span
-                  initial={{ y: "100%", opacity: 0 }}
-                  animate={
-                    startHeadings
-                      ? { y: 0, opacity: 1 }
-                      : { y: "100%", opacity: 0 }
-                  }
-                  transition={{
-                    ease: [0.22, 1, 0.36, 1],
-                    duration: 0.7,
-                    delay: 0.3,
-                  }}
-                  className="text-xl py-[2px]  inline-block font-thin font-['light'] border-b-4 border-[#F82E14] text-zinc-100 tracking-wide"
-                >
-                  LET'S GO.
-                </motion.span>
-              </div>
-            </div>
+            <motion.span
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                ease: [0.22, 1, 0.36, 1],
+                duration: 0.7,
+                delay: 1,
+              }}
+              className="text-xl mdsm:text-[1.5rem] py-[2px] mt-8 inline-block font-thin font-['light'] border-b-4 border-[#F82E14] text-zinc-100 tracking-wide"
+            >
+              LET'S GO.
+            </motion.span>
           </div>
         </div>
 
@@ -260,7 +214,8 @@ const Home = () => {
         <Page3 />
         <Page4 />
         <Page5 />
-        <Page6 />
+        <PackagePlan />
+        {/* <Page6 /> */}
         <Page7 />
         <Footer />
       </div>
