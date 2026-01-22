@@ -10,7 +10,7 @@
 
 Designed to convert interest into action through immersive motion and design. </p>
   <br /><img
-    src="./HussainBanner.png"
+    src="./HussainFarhatHome.jpeg"
     alt="Hussain Farhat Portfolio Hero"
     width="800px"
     style="border-radius: 4px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)"
@@ -88,20 +88,6 @@ entirely on the influencer's brand.
 <br />
 <br />
 
-📸 Design Preview
 
-<div align="center" style="display: flex; gap: 15px; justify-content: center">
-  <img
-    src="./MobilePreview.png"
-    alt="Mobile View"
-    width="250px"
-    style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15)"
-  /><img
-    src="./DetailPreview.png"
-    alt="Detail View"
-    width="500px"
-    style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15)"
-  />
-</div>
 <br /><br /><br />
 <div align="center">Built with ❤️ by Fayd</div>
